@@ -54,7 +54,7 @@ Players now have the option to adjust their Mouse Multiplier directly in the pro
 
  ### Modifying an Existing Profile
 
- - To modify an existing profile, run the command script, "CreateProfile.cmd" in the System folder.
+ - To modify an existing profile, run the command script, `CreateProfile.cmd` in the System folder.
  - Enter the existing profile's name, you will be asked if you would like changes to this profile. After confirming, adjust the mouse multiplier and screen resolution preset as needed.
 
 <img src="Images/ModifyProfile.png" width="768">
@@ -62,6 +62,6 @@ Players now have the option to adjust their Mouse Multiplier directly in the pro
 ### EAX Resotration (optional)
 EAX enhances the game's audio using hardware acceleration to process advanced 3D environments. Since Windows Vista, Microsoft has stripped out the DirectSound3D API, preventing EAX from functioning.
 
-- To restore EAX functionality, run the registry file, "eax_restore.reg" in the System folder and press "Yes" to the dialog to add the registry entries.
+- To restore EAX functionality, run the registry file, `eax_restore.reg` in the System folder and press "Yes" to the dialog to add the registry entries.
 
  This registry file registers `dsound.dll` in Windows, enabling EAX to function. Please note that this registry applies only to your specific Windows user. If you create a new Windows user, you'll need to run the registry file again to restore EAX.
