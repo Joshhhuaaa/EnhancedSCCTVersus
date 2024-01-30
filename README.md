@@ -1,9 +1,11 @@
 # Enhanced SCCT Versus
 A major patch for Splinter Cell: Chaos Theory's Versus mode, addressing bugs, exploits, and enhancing gameplay and map balance.
 
+For a full list of patch notes, refer to the [Patch Notes](PatchNotes.md) page.
+
 ## Installation
 
-The latest version of Enhanced SCCT Versus can be found in the [Releases](https://github.com/Joshhhuaaa/EnhancedSCCTVersus/releases) page. Please note that versions of Enhanced SCCT Versus are not compatible with the default version of the game or previous Enhanced versions.
+The latest version of Enhanced SCCT Versus can be found in the [Releases](PatchNotes.md) page. Please note that versions of Enhanced SCCT Versus are not compatible with the default version of the game or previous Enhanced versions.
 
 ---
 
