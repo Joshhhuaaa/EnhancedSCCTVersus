@@ -47,7 +47,7 @@ The Widescreen build has several issues that will likely never be fixed, it is c
 ### Creating a Profile
 Players now have the option to adjust their Mouse Multiplier directly in the profile configuration file. This allows for greater sensitivity control, potentially reducing pixel skipping and negative acceleration. As a result, creating profiles in-game is no longer supported.
 
-- To create a profile, run the command script, "CreateProfile.cmd" in the System folder.
+- To create a profile, run the command script, `CreateProfile.cmd` in the System folder.
 - Enter a profile name, enter your desired mouse multiplier, and your desired screen resolution preset.
 
  <img src="Images/CreateProfile.png" width="768">
