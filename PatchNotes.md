@@ -43,14 +43,14 @@
 ### Maps
 - Enhanced versions of all exclusive Pandora Tomorrow maps (Cinema, Krauser Lab, Mount Hospital, Schermerhorn, Vertigo Plaza) and Enhanced Sanctuary have been added to the map pool.
 - All the Pandora Tomorrow UMP maps, Sanctuary, and Skyscraper have been added to the map pool.
-#
+---
 - Enhanced Aquarius:
   - Added a pole in the Spies’ insertion point to solely access Tech Room.
   - Spies can now climb back up to their insertion point from the Tech Room ceiling vents.
   - The fish tank containing a disk objective can no longer be refilled.
   - The balcony overlooking Pirates’ Room can now be climbed by Spies.
   - Bug fixed: Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
-#
+---
 - Enhanced Cinema
   - Based on the map foundation from Pandora Tomorrow.
   - All computer objectives have been raised to 12 seconds to neutralize.
@@ -59,12 +59,12 @@
   - The ammo stock located in the Lobby’s 1st floor has been relocated to the other corner to make the climbable pole easier to access.
   - Cam. Net. support added with new cameras located in the Lobby and Video Games area.
   - Bug fixed: All motion sensors have been adjusted correctly to allow for sneak walk movement.
-#
+---
 - Enhanced Club House:
   - The computer objectives located in the back of each floor have been adjusted to 12 seconds to neutralize.
   - Added a pole near the glass structure area.
   - Bug fixed: A visual bug near the glass structure area when the floors were destroyed on the first floor.
-#
+---
 - Enhanced Factory:
   - The Cam. Net.'s located in objective rooms have been removed, only the corridors are available.
   - Spies can no longer climb back up to Main Hall's coop objective once dropping into the room located behind the PC.
@@ -76,7 +76,7 @@
   - A new ladder is located on the side of the Mechanical Digger Room objective's structure.
   - A new ladder bridge at the top Mechanical Digger Room ledge has been added.
   - Mechanical Digger Room’s lights duration has been increased to 90 seconds when the generators are activated.
-#
+---
 - Enhanced Krauser Lab:
   - Based on the map foundation from Pandora Tomorrow.
   - Removed various security from Pandora Tomorrow that were unnecessary.
@@ -87,7 +87,7 @@
   - An one-way escape exit can be used from Irradiation into the Parking Lot has been added. Mercenaries can use the new path both ways.
   - Cam. Net. support added with new cameras located in the Entrance, Parking Lot, and Irradiation.
   - Bug fixed: The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
-#
+---
 - Enhanced Missile Strike:
   - Map has been adjusted to 4 Spy lives and 3 Mercenary lives.
   - Hacking panels located in the Spies insertion point have been reduced from 10 seconds to 5 seconds.
@@ -95,7 +95,7 @@
   - Boxes around the East Control Panel objective have been shifted to prevent securing it from the center bunker.
   - Central Shaft, Light Corridor, and Generator's hacking panels now display a "Hacking in Progress..." message instead of directly exposing what the Spy is hacking.
   - In Sector 2, Spies must only capture one of the four disks to gain access to the Silo.
-#
+---
 - Enhanced Mount Hospital
   - Based on the map foundation from Pandora Tomorrow.
   - All computer objectives have been raised to 12 seconds to neutralize.
@@ -105,14 +105,14 @@
   - A laser has been added for the Nursery vent.
   - A new medical kit is located in the Spy insertion point.
   - Cam. Net. support added with new cameras located in the 1st and 2nd floor hallways.
-#
+---
 - Enhanced Museum:
   - The Cafe computer objectives have been reduced to 12 seconds to neutralize.
   - All door entrances leading into Storage are only accessible to the Mercenaries.
   - If Café Outside is neutralized, the door entrances leading to Storage will unlock in Exhibition.
   - If Café Inside is neutralized, the door entrances leading to Storage will unlock in Monolith.
   - Bug fixed: Removed the glass panels in Cafe Inside to prevent an exploit where Mercenaries can see Spies in motion vision through the ceiling.
-#
+---
 - Enhanced Orphanage:
   - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor’s hallways and one in the courtyard.
   - Sector 2 spawn points do not activate until 10 seconds after Sector 1 has been bombed.
@@ -128,7 +128,7 @@
   - Bug fixed: Added elevated ramps to the vents at the entrances to prevent an exploit where Mercenaries could neutralize Spies through the floor.
   - Bug fixed: In the Classroom hallway, one of the furniture dust covers was missing its EMF/Thermal texture.
   - Bug fixed: In Visit a Map, the first tip would remain on screen after leaving its radius.
-#
+---
 - Enhanced Polar Base:
   - Generators have been reduced to 25 seconds to neutralize.
   - The doors to access Drilling Tower’s drop zone have been reduced to 2 seconds.
@@ -138,14 +138,14 @@
   - Bug fixed: Spies should be able to properly snap a Mercenary's neck around the Generators area.
   - Bug fixed: Several container boxes were intersecting into pillars and other geometry around Hangar and Drilling Tower.
   - Bug fixed: Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
-#
+---
 - Enhanced River Mall:
   - The Cam. Net. located in Central Post has been removed.
   - Hi-Fi cameras have been removed and the hacking panel has been replaced with the Hi-Fi curtains.
   - The Offices area has been reworked to allow for faster rotation and preventing Spies from jumping out the window.
   - The computer objective located in the Offices has been relocated to the adjoining room.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
-#
+---
 - Enhanced Station:
   - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
   - Parking lot jacks have been reduced to 20 seconds to neutralize.
@@ -156,7 +156,7 @@
   - Bug fixed: One of the coops in the Streets could be sniped preventing Spies from accessing the Tech Room safely.
   - Bug fixed: Mercenaries can no longer jump on top of a table located in Checkpoint to easily guard both computer objectives.
   - Bug fixed: Shifted a checkpoint light up to prevent any issues with its collision.
-#
+---
 - Enhanced Schermerhorn
   - Based on the map foundation from Pandora Tomorrow.
   - Removed various security from Pandora Tomorrow that were unnecessary.
@@ -168,7 +168,7 @@
   - The security camera hack in the Tech Room has been removed.
   - Cam. Net. support added with new cameras located in the Station and Water Tank.
   - Bug fixed: The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
-#
+---
 - Enhanced Steel Squat:
   - A new mercenary spawn point located on the third floor for the start of the game has been added. It will only be enabled initially, it is disabled for future respawns.
   - One of the mercenaries is guaranteed an outside spawn point.
@@ -178,7 +178,7 @@
   - The Restaurant shutters have been relocated to the second floor.
   - The Laboratory area has been reworked to allow for faster rotation.
   - Secret Files hatch wraps around the boss's office instead of being a route to the connector building.
-#
+---
 - Enhanced Vertigo Plaza
   - Based on the map foundation from Pandora Tomorrow.
   - Removed various security from Pandora Tomorrow that were unnecessary.
