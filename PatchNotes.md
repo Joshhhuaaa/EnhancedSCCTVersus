@@ -1,6 +1,4 @@
-# Enhanced SCCT Versus Release Notes
-
-## Enhanced SCCT Versus v3.0 Release Notes
+# Enhanced SCCT Versus Patch Notes
 
 ### Gameplay
 - Spies no longer faintly appear in EMF vision, often called EMF ghosting, when not using any equipment.
