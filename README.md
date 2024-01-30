@@ -46,7 +46,16 @@ The Widescreen build has several issues that will likely never be fixed, it is c
 Players now have the option to adjust their Mouse Multiplier directly in the profile configuration file. This allows for greater sensitivity control, potentially reducing pixel skipping and negative acceleration. As a result, creating profiles in-game is no longer supported.
 
 - To create a profile, run the command script, "CreateProfile.cmd" in the System folder.
-- Once the script opens a window, you'll be asked to enter a profile name, enter your desired mouse multiplier, and your desired screen resolution preset.
+- Enter a profile name, enter your desired mouse multiplier, and your desired screen resolution preset.
+
+ <img src="Images/CreateProfile.png" width="768">
+
+ ### Modifying an Existing Profile
+
+ - To modify an existing profile, run the command script, "CreateProfile.cmd" in the System folder.
+ - Enter the existing profile's name, you will be asked if you would like changes to this profile. After confirming, adjust the mouse multiplier and screen resolution preset as needed.
+
+<img src="Images/ModifyProfile.png" width="768">
 
 ### EAX Resotration (optional)
 EAX enhances the game's audio using hardware acceleration to process advanced 3D environments. Since Windows Vista, Microsoft has stripped out the DirectSound3D API, preventing EAX from functioning.
