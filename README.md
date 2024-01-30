@@ -65,7 +65,3 @@ EAX enhances the game's audio using hardware acceleration to process advanced 3D
 - To restore EAX functionality, run the registry file, "eax_restore.reg" in the System folder and press "Yes" to the dialog to add the registry entries.
 
  This registry file registers `dsound.dll` in Windows, enabling EAX to function. Please note that this registry applies only to your specific Windows user. If you create a new Windows user, you'll need to run the registry file again to restore EAX.
-
-
-
-
