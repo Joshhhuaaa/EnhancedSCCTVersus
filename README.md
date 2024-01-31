@@ -7,8 +7,6 @@ For a full list of patch notes, refer to the [Patch Notes](PatchNotes.md) page.
 
 The latest version of Enhanced SCCT Versus can be found in the [Releases](https://github.com/Joshhhuaaa/EnhancedSCCTVersus/releases) page. Please note that versions of Enhanced SCCT Versus are not compatible with the default version of the game or previous Enhanced versions.
 
----
-
 ### dgVoodoo2 build [recommended]
 This is the recommended build that we have people download. It comes included with [dgVoodoo2](https://github.com/dege-diosg/dgVoodoo2), a wrapper that can restore the broken dynamic lights on modern PCs for SCCT Versus.
 
