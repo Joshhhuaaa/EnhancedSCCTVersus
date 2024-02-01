@@ -21,7 +21,7 @@
   - Activating Camo Suit
 
 ### Miscellaneous
-- Players can now adjust their Mouse Multiplier in their profile configuration file, providing greater sensitivity control, sometimes resulting in less pixel skipping and negative acceleration.
+- Players can now adjust their [Mouse Multiplier](MouseMultiplier.md) in their profile configuration files, providing greater sensitivity control, sometimes resulting in less pixel skipping and negative acceleration.
 - Creating profiles in-game is no longer supported. To create a profile, run the script in the System folder. You can also modify an existing profile's Mouse Multiplier and Screen Resolution in the script.
 - Existing profiles from Enhanced versions prior to 3.0 or default Versus remain functional and use the default Mouse Multiplier of 6.0.
 - ESRB Notice on startup has been disabled to speed up boot time.
