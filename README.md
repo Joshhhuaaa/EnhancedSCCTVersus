@@ -50,7 +50,7 @@ Players now have the option to adjust their [Mouse Multiplier](MouseMultiplier.m
 - To create a profile, run the command script, `CreateProfile.cmd` in the System folder.
 - Enter a profile name, enter your desired mouse multiplier, and your desired screen resolution preset.
 
- <img src="Images/CreateProfile.png" width="768">
+<img src="Images/CreateProfile.png" width="768">
 
  ### Modifying an Existing Profile
 
