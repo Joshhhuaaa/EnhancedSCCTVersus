@@ -59,6 +59,9 @@ Players now have the option to adjust their [Mouse Multiplier](MouseMultiplier.m
 
 <img src="Images/ModifyProfile.png" width="768">
 
+### Mouse Polling Rate
+Many mice now offer polling rates of 1000 Hz or higher. However, in SCCT Versus, higher polling rates may cause issues with your mouse aim. If your mouse allows it, try setting the polling rate to 125 Hz through software.
+
 ### EAX Resotration (optional)
 EAX enhances the game's audio using hardware acceleration to process advanced 3D environments. Since Windows Vista, Microsoft has stripped out the DirectSound3D API, preventing EAX from functioning.
 
