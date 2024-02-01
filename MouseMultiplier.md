@@ -8,7 +8,9 @@ You can modify your Mouse Multiplier using the `CreateProfile.cmd` script in the
 
 ## Automated Script
 - Whether you already have a profile or need to create a new one, use `CreateProfile.cmd` and enter your profile name when prompted. For existing profiles, simply type the name of the existing profile.
-- You will be prompted to adjust your Mouse Multiplier. Existing profiles from earlier Enhanced versions or default Versus use the default Mouse Multiplier of 6.0. 
+- You will be prompted to adjust your Mouse Multiplier. Existing profiles from earlier Enhanced versions or default Versus use the default Mouse Multiplier of 6.0.
+
+ <img src="Images/CreateProfile.png" width="768">
 
 ## Manual Edit
 - Access the Saved Games directory using the included shortcut `_Profiles_` in the System folder or navigate to: `C:\ProgramData\Ubisoft\Tom Clancy's Splinter Cell Chaos Theory\Saved Games\Versus`.
