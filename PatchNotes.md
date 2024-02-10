@@ -61,7 +61,7 @@
   - The balcony overlooking Pirates’ Room can now be climbed by Spies.
   - Bug fixed: Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
 ---
-- Enhanced Cinema
+- Enhanced Cinema:
   - Based on the map foundation from Pandora Tomorrow.
   - All computer objectives have been raised to 12 seconds to neutralize.
   - Added a new disk objective in the Entry that must be captured in the Lobby.
@@ -107,7 +107,7 @@
   - Central Shaft, Light Corridor, and Generator's hacking panels now display a "Hacking in Progress..." message instead of directly exposing what the Spy is hacking.
   - In Sector 2, Spies must only capture one of the four disks to gain access to the Silo.
 ---
-- Enhanced Mount Hospital
+- Enhanced Mount Hospital:
   - Based on the map foundation from Pandora Tomorrow.
   - All computer objectives have been raised to 12 seconds to neutralize.
   - Room 116’s room layout has been reworked to make it easier to defend.
@@ -157,7 +157,7 @@
   - The computer objective located in the Offices has been relocated to the adjoining room.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
 ---
-- Enhanced Schermerhorn
+- Enhanced Schermerhorn:
   - Based on the map foundation from Pandora Tomorrow.
   - Removed various security from Pandora Tomorrow that were unnecessary.
   - All computer objectives have been raised to 12 seconds to neutralize.
