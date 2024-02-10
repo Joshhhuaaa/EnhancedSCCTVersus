@@ -155,17 +155,6 @@
   - The computer objective located in the Offices has been relocated to the adjoining room.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
 ---
-- Enhanced Station:
-  - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
-  - Parking lot jacks have been reduced to 20 seconds to neutralize.
-  - Spies can now navigate through Checkpoint and Parking lot jacks’ doors.
-  - The second floor coop near the stairs that accessed Checkpoint has been removed.
-  - Train Maintenance’s entrance doors now open once Spies neutralize the first mission objective.
-  - One of the Medical Kits located in Checkpoint has been moved to Train Maintenance.
-  - Bug fixed: One of the coops in the Streets could be sniped preventing Spies from accessing the Tech Room safely.
-  - Bug fixed: Mercenaries can no longer jump on top of a table located in Checkpoint to easily guard both computer objectives.
-  - Bug fixed: Shifted a checkpoint light up to prevent any issues with its collision.
----
 - Enhanced Schermerhorn
   - Based on the map foundation from Pandora Tomorrow.
   - Removed various security from Pandora Tomorrow that were unnecessary.
@@ -177,6 +166,18 @@
   - The security camera hack in the Tech Room has been removed.
   - Cam. Net. support added with new cameras located in the Station and Water Tank.
   - Bug fixed: The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+---
+- Enhanced Station:
+   - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
+   - Parking lot jacks have been reduced to 20 seconds to neutralize.
+   - Parking lot jacks door has been decreased from 3 seconds to 0 seconds.
+   - The second floor coop near the stairs that accessed Checkpoint has been removed.
+   - Train Maintenance’s entrance doors now open once Spies neutralize the first mission objective.
+   - Train Maintenance doors leading to each computer objective has been decreased from 3 seconds to 0 seconds.
+   - One of the Medical Kits located in Checkpoint has been moved to Train Maintenance.
+   - Bug fixed: One of the coops in the Streets could not be sniped through the grills.
+   - Bug fixed: Mercenaries can no longer jump on top of a table located in Checkpoint to easily guard both computer objectives.
+   - Bug fixed: Shifted a checkpoint light up to prevent any issues with its collision.
 ---
 - Enhanced Steel Squat:
   - A new mercenary spawn point located on the third floor for the start of the game has been added. It will only be enabled initially, it is disabled for future respawns.
