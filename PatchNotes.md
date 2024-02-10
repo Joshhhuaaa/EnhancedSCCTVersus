@@ -73,7 +73,7 @@
   - The computer objectives located in the back of each floor have been adjusted to 12 seconds to neutralize.
   - Added a pole near the glass structure area.
   - Bug fixed: A visual bug near the glass structure area when the floors were destroyed on the first floor.
-  - Bug fixed: Sound package now includes objective interruption, win, and lose sounds.
+  - Bug fixed: Map sound package now includes objective interruption, win, and lose sounds.
 ---
 - Enhanced Factory:
   - The Cam. Net.'s located in objective rooms have been removed, only the corridors are available.
