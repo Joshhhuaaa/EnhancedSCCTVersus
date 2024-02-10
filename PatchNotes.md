@@ -73,6 +73,7 @@
   - The computer objectives located in the back of each floor have been adjusted to 12 seconds to neutralize.
   - Added a pole near the glass structure area.
   - Bug fixed: A visual bug near the glass structure area when the floors were destroyed on the first floor.
+  - Bug fixed: Sound package now includes objective interruption, win, and lose sounds.
 ---
 - Enhanced Factory:
   - The Cam. Net.'s located in objective rooms have been removed, only the corridors are available.
@@ -171,13 +172,11 @@
    - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
    - Parking lot jacks have been reduced to 20 seconds to neutralize.
    - Parking lot jacks door has been decreased from 3 seconds to 0 seconds.
-   - The second floor coop near the stairs that accessed Checkpoint has been removed.
    - Train Maintenance’s entrance doors now open once Spies neutralize the first mission objective.
    - Train Maintenance doors leading to each computer objective has been decreased from 3 seconds to 0 seconds.
-   - One of the Medical Kits located in Checkpoint has been moved to Train Maintenance.
+   - A new medical kit is located in Train Maintenance.
    - Bug fixed: One of the coops in the Streets could not be sniped through the grills.
    - Bug fixed: Mercenaries can no longer jump on top of a table located in Checkpoint to easily guard both computer objectives.
-   - Bug fixed: Shifted a checkpoint light up to prevent any issues with its collision.
 ---
 - Enhanced Steel Squat:
   - A new mercenary spawn point located on the third floor for the start of the game has been added. It will only be enabled initially, it is disabled for future respawns.
@@ -188,6 +187,7 @@
   - The Restaurant shutters have been relocated to the second floor.
   - The Laboratory area has been reworked to allow for faster rotation.
   - Secret Files hatch wraps around the boss's office instead of being a route to the connector building.
+  - Bug fixed: Chaffing the Shop ceiling lights would cause the mesh to disappear.
 ---
 - Enhanced Vertigo Plaza
   - Based on the map foundation from Pandora Tomorrow.
