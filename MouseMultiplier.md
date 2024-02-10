@@ -1,5 +1,7 @@
 # Mouse Multiplier
 
+The Mouse Multiplier provides greater control over sensitivity. It is not your in-game sensitivity. Rather, your in-game sensitivity is multiplied by the Mouse Multiplier, determining the speed you experience in-game. Additionally, the Mouse Multiplier can help in reducing pixel skipping and minimizing negative acceleration.
+
 Starting from version 3.0, Enhanced SCCT Versus allows players to customize their Mouse Multiplier directly within the profile configuration files.
 
 ## How to Adjust Your Mouse Multiplier
