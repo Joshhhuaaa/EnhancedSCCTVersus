@@ -177,7 +177,6 @@
    - Train Maintenance doors leading to each computer objective has been decreased from 3 seconds to 0 seconds.
    - A new medical kit is located in Train Maintenance.
    - Bug fixed: One of the coops in the Streets could not be sniped through the grills.
-   - Bug fixed: Mercenaries can no longer jump on top of a table located in Checkpoint to easily guard both computer objectives.
 ---
 - Enhanced Steel Squat:
   - A new mercenary spawn point located on the third floor for the start of the game has been added. It will only be enabled initially, it is disabled for future respawns.
