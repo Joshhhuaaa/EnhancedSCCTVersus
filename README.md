@@ -1,4 +1,4 @@
-# Enhanced SCCT Versus
+# <img src="Images/icon.png" width="32"> Enhanced SCCT Versus
 A major patch for Splinter Cell: Chaos Theory's Versus mode, fixing bugs and exploits while improving gameplay and map balance.
 
 For a full list of patch notes, refer to the [Patch Notes](PatchNotes.md) page.
