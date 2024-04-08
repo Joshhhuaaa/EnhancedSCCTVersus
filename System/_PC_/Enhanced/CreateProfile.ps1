@@ -340,6 +340,169 @@ IK_F6=TeamTalk
     Set-Content -Path $fileName -Value $kbdContent
  }
 
+ function Create-Profile {
+        # Mouse Multiplier
+        DisplayMouseMultiplierPrompt
+        do {
+            $mouseSpeed = Read-Host "Mouse Multiplier"
+            if ($mouseSpeed -match "^\d+(\.\d+)?$") {
+            $mouseSpeed = "{0:N6}" -f [math]::Round([double]$mouseSpeed, 6)
+            $validInput = $true
+            }
+            else {
+                Write-Host "`nInvalid mouse multiplier."  -ForegroundColor Red
+                DisplayMouseMultiplierPrompt
+                $validInput = $false
+            }
+        } while (-not $validInput)
+
+        # Screen Resolution
+        DisplayScreenResolutionPresets
+        do {
+            $screenResolution = Read-Host "Screen Resolution"
+            if ($screenResolution -match "^\d+$" -and [int]$screenResolution -ge 0 -and [int]$screenResolution -le 10) {
+                $validInput = $true
+            } else {
+                Write-Host "`nInvalid screen resolution."  -ForegroundColor Red
+                DisplayScreenResolutionPresets
+                $validInput = $false
+            }
+        } while (-not $validInput)
+
+    # Creating profile configuration files
+    $fileNames = @("${profileName}_prf.ini", "${profileName}_kbd_0.ini", "${profileName}_kbd_1.ini")
+
+    foreach ($fileName in $fileNames) {
+        $filePath = Join-Path -Path $dirPath -ChildPath $fileName
+        if ($fileName -match '_prf') {
+            Generate-ProfilePreferences $filePath $screenResolution
+        } elseif ($fileName -match '_kbd') {
+            Generate-ProfileKeybinds $filePath $mouseSpeed
+        }
+    }
+
+    Write-Host "`nSaving profile..."
+    Start-Sleep -Seconds 1
+}
+
+function Modify-Profile {
+    # Mouse Multiplier
+    DisplayMouseMultiplierPrompt
+    do {
+        $mouseSpeed = Read-Host "Mouse Multiplier"
+        if ($mouseSpeed -match "^\d+(\.\d+)?$") {
+            $mouseSpeed = "{0:N6}" -f [math]::Round([double]$mouseSpeed, 6)
+            $validInput = $true
+        } else {
+            Write-Host "`nInvalid mouse multiplier."  -ForegroundColor Red
+            DisplayMouseMultiplierPrompt
+            $validInput = $false
+        }
+    } while (-not $validInput)
+
+    # Screen Resolution
+    DisplayScreenResolutionPresets
+    do {
+        $screenResolution = Read-Host "Screen Resolution"
+        if ($screenResolution -match "^\d+$" -and [int]$screenResolution -ge 0 -and [int]$screenResolution -le 10) {
+            $validInput = $true
+        } else {
+            Write-Host "`nInvalid screen resolution."  -ForegroundColor Red
+            DisplayScreenResolutionPresets
+            $validInput = $false
+        }
+    } while (-not $validInput)
+
+    # Keeps settings from current profile, only adjust mouse multiplier and screen resolution
+    foreach ($fileName in $fileNames) {
+        $filePath = Join-Path -Path $dirPath -ChildPath $fileName
+
+        # Check if files exist
+        if (Test-Path $filePath) {
+            $content = Get-Content $filePath
+
+            # Force $content as array
+            if ($content -isnot [array]) {
+                $content = @($content)
+            }
+
+            # Generate new keybind configs if empty or damaged
+            if ($fileName -match '_kbd') {
+                    $isValid = $false
+                    foreach ($line in $content) {
+                        if ($line -match '^\[Engine.Input\]$') {
+                            $isValid = $true
+                            break
+                        }
+                    }
+
+                    if ([string]::IsNullOrWhiteSpace($content) -or (-not $isValid)) {
+                        Generate-ProfileKeybinds $filePath $mouseSpeed
+                        continue
+                    }
+
+                # Update mouse multiplier
+                if ($content -match 'IK_MouseX=Axis aMouseX Speed=(\d+(\.\d+)?)?.*') {
+                    $content = $content -replace 'IK_MouseX=Axis aMouseX Speed=(\d+(\.\d+)?)?.*', "IK_MouseX=Axis aMouseX Speed=$mouseSpeed"
+                } elseif ($content -match 'IK_MouseX=.*') {
+                    $content = $content -replace 'IK_MouseX=.*', "IK_MouseX=Axis aMouseX Speed=$mouseSpeed"
+                } else {
+                    $content += "IK_MouseX=Axis aMouseX Speed=$mouseSpeed"
+                }
+
+                if ($content -match 'IK_MouseY=Axis aMouseY Speed=(\d+(\.\d+)?)?.*') {
+                    $content = $content -replace 'IK_MouseY=Axis aMouseY Speed=(\d+(\.\d+)?)?.*', "IK_MouseY=Axis aMouseY Speed=$mouseSpeed"
+                } elseif ($content -match 'IK_MouseY=.*') {
+                    $content = $content -replace 'IK_MouseY=.*', "IK_MouseY=Axis aMouseY Speed=$mouseSpeed"
+                } else {
+                    $content += "IK_MouseY=Axis aMouseY Speed=$mouseSpeed"
+                }
+            }
+
+            # Generate new profile config if empty or damaged
+            if ($fileName -match '_prf') {
+                $isValid = $false
+                foreach ($line in $content) {
+                    if ($line -match '^\[SBase.SPlayerProfile\]$') {
+                        $isValid = $true
+                        break
+                    }
+                }
+
+                if ([string]::IsNullOrWhiteSpace($content) -or (-not $isValid)) {
+                    Generate-ProfilePreferences $filePath $screenResolution
+                    continue
+                }
+                
+                # Update screen resolution
+                if ($content -match 'ScreenRes=\d+') {
+                    $content = $content -replace 'ScreenRes=\d+', "ScreenRes=$screenResolution"
+                } elseif ($content -match 'ScreenRes=.*') {
+                    $content = $content -replace 'ScreenRes=.*', "ScreenRes=$screenResolution"
+                } else {
+                    $content += "ScreenRes=$screenResolution"
+                }
+
+            }
+
+            $content | Set-Content $filePath
+        } else {
+            # Generate new keybind configs if missing
+            if ($fileName -match '_kbd') {
+                Generate-ProfileKeybinds $filePath $mouseSpeed
+            }
+
+            # Generate new profile config if missing
+            if ($fileName -match '_prf') {
+                Generate-ProfilePreferences $filePath $screenResolution
+            }
+        }
+    }
+
+    Write-Host "`nProfile updated with new mouse multiplier and screen resolution..."
+    Start-Sleep -Seconds 1
+}
+
 Write-Host "Enhanced SCCT Versus - Create Profile"
 
 do {
@@ -378,81 +541,7 @@ do {
             $profileEdit = Read-Host
 
             if ($profileEdit.ToLower() -eq "yes") {
-                # Mouse Multiplier
-                DisplayMouseMultiplierPrompt
-
-                do {
-                    $mouseSpeed = Read-Host "Mouse Multiplier"
-                    if ($mouseSpeed -match "^\d+(\.\d+)?$") {
-                        $mouseSpeed = "{0:N6}" -f [math]::Round([double]$mouseSpeed, 6)
-                        $validInput = $true
-                    } else {
-                        Write-Host "`nInvalid mouse multiplier."  -ForegroundColor Red
-                        DisplayMouseMultiplierPrompt
-                        $validInput = $false
-                    }
-                } while (-not $validInput)
-
-                # Screen Resolution
-                DisplayScreenResolutionPresets
-
-                do {
-                    $screenResolution = Read-Host "Screen Resolution"
-                    if ($screenResolution -match "^\d+$" -and [int]$screenResolution -ge 0 -and [int]$screenResolution -le 10) {
-                        $validInput = $true
-                    } else {
-                        Write-Host "`nInvalid screen resolution."  -ForegroundColor Red
-                        DisplayScreenResolutionPresets
-                        $validInput = $false
-                    }
-                } while (-not $validInput)
-
-                # Keeps settings from current profile, only adjust mouse multiplier and screen resolution
-                foreach ($fileName in $fileNames) {
-                $filePath = Join-Path -Path $dirPath -ChildPath $fileName
-
-                    # Check if keybind files exist
-                    if (Test-Path $filePath) {
-                        $content = Get-Content $filePath
-
-                        # Check if the file is _kbd_0 or _kbd_1 and update mouse multiplier
-                        if ($fileName -match '_kbd') {
-                            if ($content -match 'IK_MouseX=Axis aMouseX Speed=(\d+(\.\d+)?)?.*') {
-                                $content = $content -replace 'IK_MouseX=Axis aMouseX Speed=(\d+(\.\d+)?)?.*', "IK_MouseX=Axis aMouseX Speed=$mouseSpeed"
-                            } elseif ($content -match 'IK_MouseX=.*') {
-                                $content = $content -replace 'IK_MouseX=.*', "IK_MouseX=Axis aMouseX Speed=$mouseSpeed"
-                            } else {
-                                $content += "IK_MouseX=Axis aMouseX Speed=$mouseSpeed"
-                            }
-
-                            if ($content -match 'IK_MouseY=Axis aMouseY Speed=(\d+(\.\d+)?)?.*') {
-                                $content = $content -replace 'IK_MouseY=Axis aMouseY Speed=(\d+(\.\d+)?)?.*', "IK_MouseY=Axis aMouseY Speed=$mouseSpeed"
-                            } elseif ($content -match 'IK_MouseY=.*') {
-                                $content = $content -replace 'IK_MouseY=.*', "IK_MouseY=Axis aMouseY Speed=$mouseSpeed"
-                            } else {
-                                $content += "IK_MouseY=Axis aMouseY Speed=$mouseSpeed"
-                            }
-                        }
-
-                        # Check if the file is _prf and update screen resolution
-                        if ($fileName -match '_prf') {
-                            if ($content -match 'ScreenRes=\d+') {
-                                $content = $content -replace 'ScreenRes=\d+', "ScreenRes=$screenResolution"
-                            } else {
-                                $content += "`nScreenRes=$screenResolution"
-                            }
-                        }
-                        $content | Set-Content $filePath
-                    } else {
-                        # If a keybind file doesn't exist, generate a new one with the updated mouse multiplier
-                        if ($fileName -match '_kbd') {
-                            Generate-ProfileKeybinds $filePath $mouseSpeed
-                        }
-                    }
-                }
-
-                Write-Host "`nProfile updated with new mouse multiplier and screen resolution..."
-                Start-Sleep -Seconds 1
+                Modify-Profile
                 return
             } elseif ($profileEdit.ToLower() -eq "no") {
                 Write-Host "`nProfile update cancelled."
@@ -463,52 +552,7 @@ do {
             }
         }
     }
-
-        # New profiles
-        # Mouse Multiplier
-        DisplayMouseMultiplierPrompt
-
-        do {
-            $mouseSpeed = Read-Host "Mouse Multiplier"
-            if ($mouseSpeed -match "^\d+(\.\d+)?$") {
-            $mouseSpeed = "{0:N6}" -f [math]::Round([double]$mouseSpeed, 6)
-            $validInput = $true
-            }
-            else {
-                Write-Host "`nInvalid mouse multiplier."  -ForegroundColor Red
-                DisplayMouseMultiplierPrompt
-                $validInput = $false
-            }
-        } while (-not $validInput)
-
-        # Screen Resolution
-        DisplayScreenResolutionPresets
-
-        do {
-            $screenResolution = Read-Host "Screen Resolution"
-            if ($screenResolution -match "^\d+$" -and [int]$screenResolution -ge 0 -and [int]$screenResolution -le 10) {
-                $validInput = $true
-            } else {
-                Write-Host "`nInvalid screen resolution."  -ForegroundColor Red
-                DisplayScreenResolutionPresets
-                $validInput = $false
-            }
-        } while (-not $validInput)
-
-    # Creating profile configuration files
-    $fileNames = @("${profileName}_prf.ini", "${profileName}_kbd_0.ini", "${profileName}_kbd_1.ini")
-
-    foreach ($fileName in $fileNames) {
-        $filePath = Join-Path -Path $dirPath -ChildPath $fileName
-        if ($fileName -match '_prf') {
-            Generate-ProfilePreferences $filePath $screenResolution
-        } elseif ($fileName -match '_kbd') {
-            Generate-ProfileKeybinds $filePath $mouseSpeed
-        }
-    }
-
-    Write-Host "`nSaving profile..."
-    Start-Sleep -Seconds 1
+    Create-Profile
     break
 } else {
     Write-Host "`nInvalid profile name.`n"
