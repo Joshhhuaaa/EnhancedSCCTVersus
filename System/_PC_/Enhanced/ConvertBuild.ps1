@@ -1,6 +1,6 @@
 # Enhanced SCCT Versus - Convert Build by Joshhhuaaa
-# This script is used to easily convert the game build between dgVoodoo2 or 3D Analyze.
-# 3D Analyze is usually only recommended if having mouse issues with dgVoodoo2 or if you would like to use windowed mode.
+# This script is used to easily convert the game build between dgVoodoo2 or 3D-Analyze.
+# 3D-Analyze is usually only recommended if having mouse issues with dgVoodoo2 or if you would like to use windowed mode.
 
 # Sets console to display white text on a black background
 function Set-ConsoleColor ($bc, $fc) {
@@ -39,7 +39,7 @@ function Convert {
 }
 
 function Convert-3DA {
-    Convert -zipFileName "3DAnalyze.zip" -message "Converting to 3D Analyze build..." -filesToRemove @("System\D3D8.dll", "System\dgVoodoo.conf")
+    Convert -zipFileName "3DAnalyze.zip" -message "Converting to 3D-Analyze build..." -filesToRemove @("System\D3D8.dll", "System\dgVoodoo.conf")
 }
 
 function Convert-DG {
@@ -57,7 +57,7 @@ $validBuild = $false
 while (-not $validBuild) {
     Write-Host "Enter your desired build (1-2):"
     Write-Host "    1  -  dgVoodoo2 (recommended)"  -ForegroundColor Yellow
-    Write-Host "    2  -  3D Analyze"  -ForegroundColor White
+    Write-Host "    2  -  3D-Analyze"  -ForegroundColor White
     $build = Read-Host "Build"
 
     switch ($build) {
