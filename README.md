@@ -13,7 +13,7 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 - By default, the game will be installed as a dgVoodoo2 build. If you would like to switch between dgVoodoo2 or 3D-Analyze, run the command script, `ConvertBuild.cmd` in the System folder.
 
 ### dgVoodoo2 build (DG) [recommended]
-This is the recommended build that we have people use. [dgVoodoo2](https://github.com/dege-diosg/dgVoodoo2) is a wrapper that can restore the broken dynamic lights on modern PCs for SCCT Versus.
+This is the recommended build that we have people use. [dgVoodoo2](https://github.com/dege-diosg/dgVoodoo2) is a wrapper that can restore the broken dynamic lights on modern video cards for SCCT Versus.
 
 - Run the game executable, `SCCT_Versus.exe` in the System folder to begin playing. 
 
@@ -22,7 +22,7 @@ dgVoodoo2 offers smoother, less pixelated shadows than 3D-Analyze. However, some
 ---
 
 ### 3D-Analyze build (3DA)
-This is an alternate build that uses 3D-Analyze to fix the broken dynamic lights on modern PCs. 3D-Analyze is usually only recommended if having mouse issues with dgVoodoo2 or if you would like to use windowed mode.
+This is an alternate build that uses 3D-Analyze to fix the broken dynamic lights on modern video cards. 3D-Analyze is usually only recommended if having mouse issues with dgVoodoo2 or if you would like to use windowed mode.
 
 - Run the command script, `Play SCCT_Versus.cmd` to begin playing.
 
