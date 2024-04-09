@@ -9,12 +9,12 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 
 ### Game Setup
 
-By default, the game will be installed as a dgVoodoo2 build. If you would like to switch between dgVoodoo2 or 3D-Analyze, run the command script, `ConvertBuild.cmd` in the System folder.
+- After downloading Enhanced SCCT Versus, extract the contents, and you should have a Enhanced SCCT Versus folder. You can place it anywhere you like, it's portable.
+- By default, the game will be installed as a dgVoodoo2 build. If you would like to switch between dgVoodoo2 or 3D-Analyze, run the command script, `ConvertBuild.cmd` in the System folder.
 
 ### dgVoodoo2 build (DG) [recommended]
 This is the recommended build that we have people use. [dgVoodoo2](https://github.com/dege-diosg/dgVoodoo2) is a wrapper that can restore the broken dynamic lights on modern PCs for SCCT Versus.
 
-- After downloading Enhanced SCCT Versus, extract the contents, and you should have a Enhanced SCCT Versus folder. You can place it anywhere you like, it's portable.
 - Run the game executable, `SCCT_Versus.exe` in the System folder to begin playing. 
 
 dgVoodoo2 offers smoother, less pixelated shadows than 3D-Analyze. However, some users experience an issue where their game starts tabbing out while clicking the mouse on dgVoodoo2. If that occurs, you can try using 3D-Analyze to fix the issue.
@@ -24,7 +24,6 @@ dgVoodoo2 offers smoother, less pixelated shadows than 3D-Analyze. However, some
 ### 3D-Analyze build (3DA)
 This is an alternate build that uses 3D-Analyze to fix the broken dynamic lights on modern PCs. 3D-Analyze is usually only recommended if having mouse issues with dgVoodoo2 or if you would like to use windowed mode.
 
-- After downloading Enhanced SCCT Versus, extract the contents, and you should have a Enhanced SCCT Versus folder. You can place it anywhere you like, it's portable.
 - Run the command script, `Play SCCT_Versus.cmd` to begin playing.
 
 The command script is in the root directory, it configures and runs the game executable under 3D-Analyze to fix the lighting.
