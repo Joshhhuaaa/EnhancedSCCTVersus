@@ -19,17 +19,17 @@ function DisplayMouseMultiplierPrompt {
 # Screen Resolution
 function DisplayScreenResolutionPresets {
     Write-Host "`nEnter your desired screen resolution preset (0-10):" -ForegroundColor White
-    Write-Host "    0  - 640x480" -ForegroundColor Yellow
-    Write-Host "    1  - 800x600" -ForegroundColor White
-    Write-Host "    2  - 1024x768" -ForegroundColor Yellow
-    Write-Host "    3  - 1280x1024" -ForegroundColor White
-    Write-Host "    4  - 7680x4320 (Safe option, native resolution, supports up to 8K)" -ForegroundColor Yellow
-    Write-Host "    5  - 1440x1080" -ForegroundColor White
-    Write-Host "    6  - 1920x1080" -ForegroundColor Yellow
-    Write-Host "    7  - 1920x1440" -ForegroundColor White
-    Write-Host "    8  - 2560x1440" -ForegroundColor Yellow
-    Write-Host "    9  - 2880x2160" -ForegroundColor White
-    Write-Host "    10 - 3840x2160" -ForegroundColor Yellow
+    Write-Host "    0  -  640x480" -ForegroundColor Yellow
+    Write-Host "    1  -  800x600" -ForegroundColor White
+    Write-Host "    2  -  1024x768" -ForegroundColor Yellow
+    Write-Host "    3  -  1280x1024" -ForegroundColor White
+    Write-Host "    4  -  7680x4320 (Safe option, native resolution, supports up to 8K)" -ForegroundColor Yellow
+    Write-Host "    5  -  1440x1080" -ForegroundColor White
+    Write-Host "    6  -  1920x1080" -ForegroundColor Yellow
+    Write-Host "    7  -  1920x1440" -ForegroundColor White
+    Write-Host "    8  -  2560x1440" -ForegroundColor Yellow
+    Write-Host "    9  -  2880x2160" -ForegroundColor White
+    Write-Host "    10 -  3840x2160" -ForegroundColor Yellow
 }
 
 # _prf.ini
@@ -555,6 +555,6 @@ do {
     Create-Profile
     break
 } else {
-    Write-Host "`nInvalid profile name.`n"
+    Write-Host "`nInvalid profile name.`n" -ForegroundColor Red
     }
 } while ($true)
