@@ -44,8 +44,8 @@
 | 9         | 2880x2160             |
 | 10        | 3840x2160             |
 
-- dgVoodoo2 and 3D Analyze comes included to fix dynamic lighting such as the Mercenary’s flashlight.
-  - If you would like to convert your game to 3D Analyze or dgVoodoo2, run the `ConvertBuild.cmd` script in the System folder.
+- dgVoodoo2 and 3D-Analyze comes included to fix dynamic lighting such as the Mercenary’s flashlight.
+  - By default, the game will be installed as a dgVoodoo2 build. If you would like to switch between dgVoodoo2 or 3D-Analyze, run the command script, ConvertBuild.cmd in the System folder.
 - Framer included in the game directory to easily remove the 30 FPS restriction.
 - EAX can easily be restored into the game using the `eax_restore.reg` script in the System subfolder.
 - Profiles can easily be accessed using the shortcut added in the System subfolder.
