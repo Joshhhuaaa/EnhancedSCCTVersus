@@ -107,6 +107,7 @@
   - Boxes around the East Control Panel objective have been shifted to prevent securing it from the center bunker.
   - Central Shaft, Light Corridor, and Generator's hacking panels now display a "Hacking in Progress..." message instead of directly exposing what the Spy is hacking.
   - In Sector 2, Spies must only capture one of the four disks to gain access to the Silo.
+  - *Bug fixed:* Central Shaft interaction for Mercenaries could be spammed resulting in the door and its alarm message to become desynchronized.
 ---
 - Enhanced Mount Hospital:
   - Based on the map foundation from Pandora Tomorrow.
@@ -148,8 +149,9 @@
   - Drilling Tower’s right balcony has been raised to prevent Spies from auto jumping off.
   - *Bug fixed:* Security lasers have been corrected to disable the correct objectives.
   - *Bug fixed:* Spies should be able to properly snap a Mercenary's neck around the Generators area.
-  - *Bug fixed:* Several container boxes were intersecting into pillars and other geometry around Hangar and Drilling Tower.
   - *Bug fixed:* Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
+  - *Bug fixed:* Several container boxes were intersecting into pillars and other geometry around Hangar and Drilling Tower.
+  - *Bug fixed:* Small collision fix between two meshes in the Drilling Tower drop zone room.
 ---
 - Enhanced River Mall:
   - The Cam. Net. located in Central Post has been removed.
@@ -157,6 +159,8 @@
   - The Offices area has been reworked to allow for faster rotation and preventing Spies from jumping out the window.
   - The computer objective located in the Offices has been relocated to the adjoining room.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
+  - *Bug fixed:* Hi-Fi Curtains interaction would no longer work if reactivated before the curtains were finished transitioning.
+  - *Bug fixed:* Small collision fix on the glass doors that would allow players to shoot through the edges of them.
 ---
 - Enhanced Schermerhorn:
   - Based on the map foundation from Pandora Tomorrow.
@@ -178,6 +182,7 @@
    - Train Maintenance doors leading to each computer objective has been decreased from 3 seconds to 0 seconds.
    - A new medical kit is located in Train Maintenance.
    - *Bug fixed:* One of the coops in the Streets could not be sniped through the grills.
+   - *Bug fixed:* The metal vents above Checkpoint will no longer create dust when moving fast in them.
 ---
 - Enhanced Steel Squat:
   - A new mercenary spawn point located on the third floor for the start of the game has been added. It will only be enabled initially, it is disabled for future respawns.
