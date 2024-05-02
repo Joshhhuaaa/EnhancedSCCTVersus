@@ -1,7 +1,7 @@
 # Enhanced SCCT Versus Patch Notes
 
 ### Gameplay
-- Spies no longer faintly appear in EMF vision, often called EMF ghosting, when not using any equipment.
+- Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
 - Spies no longer have adrenaline when being damaged allowing them to move faster for a short period. This eliminates major lag when Spies get shot at off-host.
 - Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
 - Adjusted the Mercenary crosshair to align more closely with the center of the screen.
@@ -60,7 +60,7 @@
   - Spies can now climb back up to their insertion point from the Tech Room ceiling vents.
   - The fish tank containing a disk objective can no longer be refilled.
   - The balcony overlooking Pirates’ Room can now be climbed by Spies.
-  - Bug fixed: Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
+  - *Bug fixed:* Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
 ---
 - Enhanced Cinema:
   - Based on the map foundation from Pandora Tomorrow.
@@ -69,13 +69,13 @@
   - A new medical kit is located in the Entry.
   - The ammo stock located in the Lobby’s 1st floor has been relocated to the other corner to make the climbable pole easier to access.
   - Cam. Net. support added with new cameras located in the Lobby and Video Games area.
-  - Bug fixed: All motion sensors have been adjusted correctly to allow for sneak walk movement.
+  - *Bug fixed:* All motion sensors have been adjusted correctly to allow for sneak walk movement.
 ---
 - Enhanced Club House:
   - The computer objectives located in the back of each floor have been adjusted to 12 seconds to neutralize.
   - Added a pole near the glass structure area.
-  - Bug fixed: A visual bug near the glass structure area when the floors were destroyed on the first floor.
-  - Bug fixed: Map sound package now includes objective interruption, win, and lose sounds.
+  - *Bug fixed:* A visual bug near the glass structure area when the floors were destroyed on the first floor.
+  - *Bug fixed:* Map sound package now includes objective interruption, win, and lose sounds.
 ---
 - Enhanced Factory:
   - The Cam. Net.'s located in objective rooms have been removed, only the corridors are available.
@@ -98,7 +98,7 @@
   - Irradiation’s computer objectives have been shifted out of their chambers so Spies can have an easier time escaping.
   - An one-way escape exit can be used from Irradiation into the Parking Lot has been added. Mercenaries can use the new path both ways.
   - Cam. Net. support added with new cameras located in the Entrance, Parking Lot, and Irradiation.
-  - Bug fixed: The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+  - *Bug fixed:* The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
 ---
 - Enhanced Missile Strike:
   - Map has been adjusted to 4 Spy lives and 3 Mercenary lives.
@@ -123,7 +123,7 @@
   - All door entrances leading into Storage are only accessible to the Mercenaries.
   - If Café Outside is neutralized, the door entrances leading to Storage will unlock in Exhibition.
   - If Café Inside is neutralized, the door entrances leading to Storage will unlock in Monolith.
-  - Bug fixed: Removed the glass panels in Cafe Inside to prevent an exploit where Mercenaries can see Spies in motion vision through the ceiling.
+  - *Bug fixed:* Removed the glass panels in Cafe Inside to prevent an exploit where Mercenaries can see Spies in Motion Vision through the ceiling.
 ---
 - Enhanced Orphanage:
   - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor’s hallways and one in the courtyard.
@@ -136,20 +136,20 @@
   - A motion sensor located in the ceiling of Canteen has been removed.
   - A motion sensor located in the ceiling of Canteen has been relocated to detect both routes in the vent.
   - The drop zone has been repositioned with cover to protect spies.
-  - Bug fixed: In Sector 1, when the bomb objectives exploded, they would kill players in their blast radius longer than the explosion visual effect.
-  - Bug fixed: Added elevated ramps to the vents at the entrances to prevent an exploit where Mercenaries could neutralize Spies through the floor.
-  - Bug fixed: In the Classroom hallway, one of the furniture dust covers was missing its EMF/Thermal texture.
-  - Bug fixed: In Visit a Map, the first tip would remain on screen after leaving its radius.
+  - *Bug fixed:* In Sector 1, when the bomb objectives exploded, they would kill players in their blast radius longer than the explosion visual effect.
+  - *Bug fixed:* Added elevated ramps to the vents at the entrances to prevent an exploit where Mercenaries could neutralize Spies through the floor.
+  - *Bug fixed:* In the Classroom hallway, one of the furniture dust covers was missing its EMF/Thermal texture.
+  - *Bug fixed:* In Visit a Map, the first tip would remain on screen after leaving its radius.
 ---
 - Enhanced Polar Base:
   - Generators have been reduced to 25 seconds to neutralize.
   - The doors to access Drilling Tower’s drop zone have been reduced to 2 seconds.
   - Removed 4 of the 8 medical kits as this map has too many for no good reason. The 4 medical kits that remain: Spy spawn, Mercenary spawn, Drilling Tower, and the one near Life Zone.
   - Drilling Tower’s right balcony has been raised to prevent Spies from auto jumping off.
-  - Bug fixed: Security lasers have been corrected to disable the correct objectives.
-  - Bug fixed: Spies should be able to properly snap a Mercenary's neck around the Generators area.
-  - Bug fixed: Several container boxes were intersecting into pillars and other geometry around Hangar and Drilling Tower.
-  - Bug fixed: Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
+  - *Bug fixed:* Security lasers have been corrected to disable the correct objectives.
+  - *Bug fixed:* Spies should be able to properly snap a Mercenary's neck around the Generators area.
+  - *Bug fixed:* Several container boxes were intersecting into pillars and other geometry around Hangar and Drilling Tower.
+  - *Bug fixed:* Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
 ---
 - Enhanced River Mall:
   - The Cam. Net. located in Central Post has been removed.
@@ -168,7 +168,7 @@
   - The intractable buttons that opened and closed the Water Tank Corridor gates have been removed.
   - The security camera hack in the Tech Room has been removed.
   - Cam. Net. support added with new cameras located in the Station and Water Tank.
-  - Bug fixed: The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+  - *Bug fixed:* The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
 ---
 - Enhanced Station:
    - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
@@ -177,7 +177,7 @@
    - Train Maintenance’s entrance doors now open once Spies neutralize the first mission objective.
    - Train Maintenance doors leading to each computer objective has been decreased from 3 seconds to 0 seconds.
    - A new medical kit is located in Train Maintenance.
-   - Bug fixed: One of the coops in the Streets could not be sniped through the grills.
+   - *Bug fixed:* One of the coops in the Streets could not be sniped through the grills.
 ---
 - Enhanced Steel Squat:
   - A new mercenary spawn point located on the third floor for the start of the game has been added. It will only be enabled initially, it is disabled for future respawns.
@@ -188,7 +188,7 @@
   - The Restaurant shutters have been relocated to the second floor.
   - The Laboratory area has been reworked to allow for faster rotation.
   - Secret Files hatch wraps around the boss's office instead of being a route to the connector building.
-  - Bug fixed: Chaffing the Shop ceiling lights would cause the mesh to disappear.
+  - *Bug fixed:* Chaffing the Shop ceiling lights would cause the mesh to disappear.
 ---
 - Enhanced Vertigo Plaza
   - Based on the map foundation from Pandora Tomorrow.
