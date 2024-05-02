@@ -61,6 +61,7 @@
   - The fish tank containing a disk objective can no longer be refilled.
   - The balcony overlooking Pirates’ Room can now be climbed by Spies.
   - *Bug fixed:* Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
+  - *Bug fixed:* One of Pirates' Room beams was shifted to fix a small gap.
 ---
 - Enhanced Cinema:
   - Based on the map foundation from Pandora Tomorrow.
@@ -156,6 +157,7 @@
 - Enhanced River Mall:
   - The Cam. Net. located in Central Post has been removed.
   - Hi-Fi cameras have been removed and the hacking panel has been replaced with the Hi-Fi curtains.
+  - The camera located in Parking Lifts neutralize time has been increased from 15 seconds to 30 seconds aligning it with the standard across other maps.
   - The Offices area has been reworked to allow for faster rotation and preventing Spies from jumping out the window.
   - The computer objective located in the Offices has been relocated to the adjoining room.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
@@ -205,3 +207,4 @@
   - Each bridge coming from the central building contains a new horizontal lift to make rotations faster for Mercenaries.
   - The arches on the top of each bridge have been removed to make rotations faster for Spies.
   - Cam. Net. support added with new cameras located on the Helipad.
+  - *Bug fixed:* Collision missing on door frames which allowed gameplay objects be placed inside them.
