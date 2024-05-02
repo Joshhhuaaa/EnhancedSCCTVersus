@@ -23,8 +23,8 @@
 
 ### Miscellaneous
 - Players can now adjust their [Mouse Multiplier](MouseMultiplier.md) in their profile configuration files, providing greater sensitivity control, sometimes resulting in less pixel skipping and negative acceleration.
-- Creating profiles in-game is no longer supported. To create a profile, run the script in the System folder. You can also modify an existing profile's Mouse Multiplier and Screen Resolution in the script.
-- Existing profiles from Enhanced versions prior to 3.0 or default Versus remain functional and use the default Mouse Multiplier of 6.0.
+  - Creating profiles in-game is no longer supported. To create a profile, run the script in the System folder. You can also modify an existing profile's Mouse Multiplier and Screen Resolution in the script.
+  - Existing profiles from Enhanced versions prior to 3.0 or default Versus remain functional and use the default Mouse Multiplier of 6.0.
 - ESRB Notice on startup has been disabled to speed up boot time.
 - The longer lobby music from the Xbox version has been restored.
 - In Video Options, 1600x1200 is replaced with "Native Resolution" as the highest preset resolution choice, supporting up to 8K.
@@ -44,11 +44,12 @@
 | 9         | 2880x2160             |
 | 10        | 3840x2160             |
 
-- dgVoodoo2 or 3D Analyze comes included to fix dynamic lighting such as the Mercenary’s flashlight.
+- dgVoodoo2 and 3D Analyze comes included to fix dynamic lighting such as the Mercenary’s flashlight.
+  - If you would like to convert your game to 3D Analyze or dgVoodoo2, run the `ConvertBuild.cmd` script in the System folder.
 - Framer included in the game directory to easily remove the 30 FPS restriction.
-- EAX can easily be restored into the game using the script in the System subfolder.
+- EAX can easily be restored into the game using the `eax_restore.reg` script in the System subfolder.
 - Profiles can easily be accessed using the shortcut added in the System subfolder.
-- Improvements to the automated ChaosTheory.log format.
+- Improvements to the automated `ChaosTheory.log` format.
 
 ### Maps
 - Enhanced versions of all exclusive Pandora Tomorrow maps (Cinema, Krauser Lab, Mount Hospital, Schermerhorn, Vertigo Plaza) and Enhanced Sanctuary have been added to the map pool.
