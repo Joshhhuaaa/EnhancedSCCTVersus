@@ -3,8 +3,11 @@
 ### Gameplay
 - Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
 - Spies no longer have adrenaline when being damaged allowing them to move faster for a short period. This eliminates major lag when Spies get shot at off-host.
+- Improved Mercenary movement to prevent accidentally performing a Berserk if moving forward.
 - Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
 - Adjusted the Mercenary crosshair to align more closely with the center of the screen.
+- Submachine Gun’s rate of fire has been reduced from 0.09 to 0.12.
+- Submachine Gun's visual recoil has been reduced.
 - Proxy Mines' minimum detected velocity (140) have been raised to the Xbox version's value (200). This eliminates a rare bug that causes Proxy Mines to explode even when sneaking.
 - Presence Detectors will scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
 - Sticky Cam and Cam Net views now require less force to rotate, this improves lower Mouse Multipliers and allows for more precision in those camera modes.
