@@ -4,12 +4,10 @@ A major patch for Splinter Cell: Chaos Theory's Versus mode, fixing bugs and exp
 For a full list of patch notes, refer to the [Patch Notes](PatchNotes.md) page.
 
 ## Installation
-
 The latest version of Enhanced SCCT Versus can be found in the [Releases](https://github.com/Joshhhuaaa/EnhancedSCCTVersus/releases) page. Please note that versions of Enhanced SCCT Versus are not compatible with the default version of the game or previous Enhanced versions.
 
 ### Game Setup
-
-- After downloading Enhanced SCCT Versus, extract the contents, and you should have a Enhanced SCCT Versus folder. You can place it anywhere you like, it's portable.
+- After downloading Enhanced SCCT Versus, extract the contents. You will then have an Enhanced SCCT Versus folder, which you can place anywhere you like since it's portable.
 - By default, the game will be installed as a dgVoodoo2 build. If you would like to switch between dgVoodoo2 or 3D-Analyze, run the command script, `ConvertBuild.cmd` in the System folder.
 
 ### dgVoodoo2 build (DG) [recommended]
