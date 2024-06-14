@@ -129,6 +129,7 @@
   - If Café Outside is neutralized, the door entrances leading to Storage will unlock in Exhibition.
   - If Café Inside is neutralized, the door entrances leading to Storage will unlock in Monolith.
   - *Bug fixed:* Removed the glass panels in Cafe Inside to prevent an exploit where Mercenaries can see Spies in Motion Vision through the ceiling.
+  - *Bug fixed:* Spies in the Monolith vents could be seen from Cafe's outside fake backdrop material.
 ---
 - Enhanced Orphanage:
   - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor’s hallways and one in the courtyard.
