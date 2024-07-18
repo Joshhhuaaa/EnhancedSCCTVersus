@@ -29,19 +29,13 @@ The command script is in the root directory, it configures and runs the game exe
 ---
 
 ### Creating a Profile
-Players now have the option to adjust their [Mouse Multiplier](MouseMultiplier.md) directly in the profile configuration files. This allows for greater sensitivity control, potentially reducing pixel skipping and negative acceleration. As a result, creating profiles in-game is no longer supported.
+Players now have the option to adjust their [Mouse Multiplier](MouseMultiplier.md) directly in the profile configuration files. This allows for greater sensitivity control, potentially reducing pixel skipping and negative acceleration. As a result, creating profiles within the game is no longer supported. Instead, use the Profile Manager script located in the System folder.
 
-- To create a profile, run the command script, `CreateProfile.cmd` in the System folder.
-- Enter a profile name, enter your desired mouse multiplier, and your desired screen resolution preset.
+- To create a profile, run the command script, `ProfileManager.cmd` in the System folder.
+- Enter a profile name or choose an existing one from the dropdown menu. Then, enter your desired Mouse Multiplier setting and select your desired screen resolution preset.
+- Lastly, click the "Create Profile" button to either create a new profile or update an existing one.
 
-<img src="Images/CreateProfile.png" width="768">
-
- ### Modifying an Existing Profile
-
- - To modify an existing profile, run the command script, `CreateProfile.cmd` in the System folder.
- - Enter the existing profile's name, you will be asked if you would like changes to this profile. After confirming, adjust the mouse multiplier and screen resolution preset as needed.
-
-<img src="Images/ModifyProfile.png" width="768">
+<img src="Images/ProfileManager.png">
 
 ### Mouse Polling Rate
 Many mice now offer polling rates of 1000 Hz or higher. However, in SCCT Versus, higher polling rates may cause issues with your mouse aim. If your mouse allows it, try setting the polling rate to 125 Hz through software.
