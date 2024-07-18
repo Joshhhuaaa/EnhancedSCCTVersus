@@ -56,7 +56,7 @@
 
 ### Maps
 - Enhanced versions of all exclusive Pandora Tomorrow maps (Cinema, Krauser Lab, Mount Hospital, Schermerhorn, Vertigo Plaza) and Enhanced Sanctuary have been added to the map pool.
-- All the Pandora Tomorrow UMP maps, Sanctuary, and Skyscraper have been added to the map pool.
+- All the Pandora Tomorrow UMP maps, Sanctuary, Skyscraper, and Terminus have been added to the map pool.
 ---
 - Enhanced Aquarius:
   - Added a pole in the Spies’ insertion point to solely access Tech Room.
@@ -92,6 +92,7 @@
   - A new ladder is located on the side of the Mechanical Digger Room objective's structure.
   - A new ladder bridge at the top Mechanical Digger Room ledge has been added.
   - Mechanical Digger Room’s lights duration has been increased to 90 seconds when the generators are activated.
+  - *Bug fixed:* Interactable objects in the Machine Room and Mechanical Digger Room incorrectly display "Security failure" on the HUD when chaffed, despite having no chaff effect.
 ---
 - Enhanced Krauser Lab:
   - Based on the map foundation from Pandora Tomorrow.
@@ -159,12 +160,13 @@
   - *Bug fixed:* Small collision fix between two meshes in the Drilling Tower drop zone room.
 ---
 - Enhanced River Mall:
-  - The Cam. Net. located in Central Post has been removed.
-  - Hi-Fi cameras have been removed and the hacking panel has been replaced with the Hi-Fi curtains.
-  - The camera located in Parking Lifts neutralize time has been increased from 15 seconds to 30 seconds aligning it with the standard across other maps.
+  - Spy Insertion Point has been reworked to allow for faster entry into the map.
   - The Offices area has been reworked to allow for faster rotation and preventing Spies from jumping out the window.
   - The computer objective located in the Offices has been relocated to the adjoining room.
+  - The hacking panel for Hi-Fi cameras has been relocated upstairs to the previous location of the Offices objective.
+  - The hacking panel for Hi-Fi shutters has been relocated closer to the front.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
+  - The vent located near the Hi-Fi 2nd Floor objective has been shortened.
   - *Bug fixed:* Hi-Fi Curtains interaction would no longer work if reactivated before the curtains were finished transitioning.
   - *Bug fixed:* Small collision fix on the glass doors that would allow players to shoot through the edges of them.
 ---
