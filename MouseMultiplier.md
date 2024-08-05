@@ -32,4 +32,5 @@ IK_MouseY=Axis aMouseY Speed=0.500000
 - For a significant reduction in pixel skipping, try using a Mouse Multiplier within 0.1 to 1.0. It is recommended pairing this with an in-game Mouse Sensitivity of 40.
 - Mouse Sensitivity of 40 in-game appears to have significantly less negative acceleration. Therefore, aim to find a Mouse Multiplier between 0.1 to 1.0 that feels comfortable while using an in-game Mouse Sensitivity of 40. You can always adjust your mouse DPI to compensate with no negative effects if necessary.
 
-**Note: Mouse Sensitivity of 40 in-game will not feel good on the default Mouse Multiplier of 6.0 and may result in significant pixel skipping. It is only recommended to use an in-game Mouse Sensitivity of 40 if you can keep your multiplier under 1.0.**
+> [!NOTE]
+>Mouse Sensitivity of 40 in-game will not feel good on the default Mouse Multiplier of 6.0 and may result in significant pixel skipping. It is only recommended to use an in-game Mouse Sensitivity of 40 if you can keep your multiplier under 1.0.
