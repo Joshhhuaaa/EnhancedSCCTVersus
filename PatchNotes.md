@@ -163,8 +163,6 @@
   - Spy Insertion Point has been reworked to allow for faster entry into the map.
   - The Offices area has been reworked to allow for faster rotation and preventing Spies from jumping out the window.
   - The computer objective located in the Offices has been relocated to the adjoining room.
-  - The hacking panel for Hi-Fi cameras has been relocated upstairs to the previous location of the Offices objective.
-  - The hacking panel for Hi-Fi shutters has been relocated closer to the front.
   - A new vent has been added on the Video Games side of the Spy Insertion Point.
   - The vent located near the Hi-Fi 2nd Floor objective has been shortened.
   - *Bug fixed:* Hi-Fi Curtains interaction would no longer work if reactivated before the curtains were finished transitioning.
