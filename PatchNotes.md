@@ -9,7 +9,7 @@
 - Submachine Gun’s rate of fire has been reduced from 0.09 to 0.12.
 - Submachine Gun's visual recoil has been reduced.
 - Proxy Mines' minimum detected velocity (140) have been raised to the Xbox version's value (200). This eliminates a rare bug that causes Proxy Mines to explode even when sneaking.
-- Presence Detectors will scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
+- Presence Detectors scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
 - Sticky Cam and Cam Net views now require less force to rotate, this improves lower Mouse Multipliers and allows for more precision in those camera modes.
   
 ### Audio
@@ -84,11 +84,11 @@
 - Enhanced Factory:
   - The Cam. Net.'s located in objective rooms have been removed, only the corridors are available.
   - Spies can no longer climb back up to Main Hall's coop objective once dropping into the room located behind the PC.
-  - The explosive barrels located in the Machine Room will no longer cause a major explosion.
+  - The explosive barrels located in the Machine Room no longer cause a major explosion.
   - The corner vent has been removed near the bottom Machine Room objective.
   - Spies can now open Corridor B’s door on both sides.
   - The mechanical digger has been raised to 5 seconds to activate.
-  - Transformer Room’s electric currents will damage players 25 hit points per second instead of instantly killing players.
+  - Transformer Room's electric currents damage players 25 hit points per second instead of instantly killing players.
   - A new ladder is located on the side of the Mechanical Digger Room objective's structure.
   - A new ladder bridge at the top Mechanical Digger Room ledge has been added.
   - Mechanical Digger Room’s lights duration has been increased to 90 seconds when the generators are activated.
@@ -103,7 +103,7 @@
   - Irradiation’s computer objectives have been shifted out of their chambers so Spies can have an easier time escaping.
   - An one-way escape exit can be used from Irradiation into the Parking Lot has been added. Mercenaries can use the new path both ways.
   - Cam. Net. support added with new cameras located in the Entrance, Parking Lot, and Irradiation.
-  - *Bug fixed:* The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+  - *Bug fixed:* The explosive barrels now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
 ---
 - Enhanced Missile Strike:
   - Map has been adjusted to 4 Spy lives and 3 Mercenary lives.
@@ -178,7 +178,7 @@
   - The intractable buttons that opened and closed the Water Tank Corridor gates have been removed.
   - The security camera hack in the Tech Room has been removed.
   - Cam. Net. support added with new cameras located in the Station and Water Tank.
-  - *Bug fixed:* The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+  - *Bug fixed:* The explosive barrels now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
 ---
 - Enhanced Station:
    - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
