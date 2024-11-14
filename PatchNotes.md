@@ -1,17 +1,26 @@
 # Enhanced SCCT Versus Patch Notes
 
+Thanks to AllyPal for contributing to various fixes and improvements in this version of Enhanced SCCT Versus with the [SCCT Versus Reloaded](https://allypal.github.io/SCCT_Versus_Reloaded) patch.
+
 ### Gameplay
+- Grenades fired from a weapon will no longer sometimes explode instantly on impact, often called insta grenades, instead of waiting for their usual detonation time.
+- Spies with adrenaline will no longer have stutter movement as clients.
 - Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
-- Spies no longer have adrenaline when being damaged allowing them to move faster for a short period. This eliminates major lag when Spies get shot at off-host.
-- Improved Mercenary movement to prevent accidentally performing a Berserk if moving forward.
+- Sticky Cam context menu that is used when a previous camera is active will no longer interrupt shooting a new camera when moving forward or backward.
+- Sticky Cam interaction radius has been increased to make it easier to pick up cameras without needing to be at a specific angle.
+- Frag Grenades fired by Mercenaries while moving forward will no longer visually appear to fall at the Mercenary's feet on the client's screen when the host's frame rate is significantly higher.
+- Vertical sway in Mercenary Sniper Mode will no longer increase on higher frame rates.
+- Weapon kick in Mercenary Sniper Mode will no longer change depending on mouse sensitivity.
+- Screen shake will more closely maintain its original intensity on higher frame rates.
+- The Spy foot climb animation will no longer fail at certain heights on higher frame rates.
+- The Coop boost animation has been locked at frame rates above 90 to ensure the Spy does not fail to reach the ledge.
 - Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
+- Animated textures and shaders will maintain their original speed and won't run faster on higher frame rates.
+- Improved Mercenary movement to prevent accidentally performing a Berserk if moving forward.
 - Adjusted the Mercenary crosshair to align more closely with the center of the screen.
-- Submachine Gun’s rate of fire has been reduced from 0.09 to 0.12.
-- Submachine Gun's visual recoil has been reduced.
-- Proxy Mines' minimum detected velocity (140) have been raised to the Xbox version's value (200). This eliminates a rare bug that causes Proxy Mines to explode even when sneaking.
-- Presence Detectors scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
-- Sticky Cam and Cam Net views now require less force to rotate, this improves lower Mouse Multipliers and allows for more precision in those camera modes.
-  
+- Proxy Mines' minimum detected velocity (140) have been raised to the Xbox version's value (200). This eliminates a rare chance that causes Proxy Mines to explode even when sneaking.
+- Presence Detectors will scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
+
 ### Audio
 - The following sounds are no longer audible for more stealthy gameplay:
   - Using medical kits
@@ -25,53 +34,56 @@
   - Activating Camo Suit
 
 ### Miscellaneous
-- Players can now adjust their [Mouse Multiplier](MouseMultiplier.md) in their profile configuration files, providing greater sensitivity control, sometimes resulting in less pixel skipping and negative acceleration.
-  - Creating profiles in-game is no longer supported. To create a profile, run the `CreateProfile.cmd` script in the System folder. You can also modify an existing profile's Mouse Multiplier and Screen Resolution in the script.
-  - Existing profiles from Enhanced versions prior to 3.0 or default Versus remain functional and use the default Mouse Multiplier of 6.0.
+- New console commands have been added. Open the console with the Tilde (~) or Backtick (\`) key and type `help` to see the list of available commands. Press the Escape key to close the console.
+- LAN Sessions now have the functionality to connect over the internet via IP address or master server.
+  - Includes a LAN master server that will automatically find sessions hosted by others online.
+  - UPnP (Universal Plug and Play) will automatically port forward when hosting a game session if enabled in your router. UPnP can be configured by editing `host_upnp` in `SCCT_Versus.config`
+  - Port numbers can be configured by editing `client_port_query`, `host_port_game` and `host_port_query` in `SCCT_Versus.config.`
+  - To connect directly to a specific IP address, configure their IP address and port (default: 8888) in the `serverList` entry of `SCCT_Versus.config`.
+- Mouse input has been corrected to accurately read data at high polling rates, eliminating the need for 125 Hz polling rate.
+- Mouse input no longer has negative acceleration.
+- Mouse input has been improved for the Sticky Cam and Cam. Net. camera modes.
+- Mouse sensitivity is no longer tied to frame rate; switching between different frame rates should now feel identical.
+- Mouse sensitivity is now configured exclusively through the in-game console using `sens <value>` command or in `SCCT_Versus.config`.
+- Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the in-game console using `sens_camera <value>` command or in `SCCT_Versus.config`.
+- Mouse sensitivity for the GUI menu cursor can now be configured through the in-game console using `sens_menu <value>` command or in `SCCT_Versus.config`.
+- Frame rate can now be configured through the in-game console using `fps_host <value>` and `fps_client <value>` commands or in `SCCT_Versus.config`.
+- Frame timing has been improved to be more consistent and reduced input lag.
+- Screen resolutions are now read directly from the device driver, supporting any resolution that the hardware can handle.
+- Monitor's refresh rate will now automatically detect and apply the highest available setting.
+- Widescreen support has been added to prevent 16:9 aspect ratio from appearing stretched, configurable through the in-game console using `widescreen <true/false>` command or in `SCCT_Versus.config`.
+  - Mercenary field of view can be configured through the in-game console using `ws_fov <value>` command or in `SCCT_Versus.config`. A value of `112.0` will preserve the same vertical view as 4:3 aspect ratio.
+- Experimental native borderless mode, it is recommended to use this setting only with native resolution.
+- Increased the level of detail (LOD) distance significantly, improving the quality of meshes at greater distances.
+- A native fix comes included to fix dynamic lighting such as the Mercenary's flashlight.
+- The dedicated server executable is not currently supported and will not be included.
 - ESRB Notice on startup has been disabled to speed up boot time.
 - The longer lobby music from the Xbox version has been restored.
-- In Video Options, 1600x1200 is replaced with "Native Resolution" as the highest preset resolution choice, supporting up to 8K.
-  - For users facing issues with Native Resolution detection or preferring a 4:3 aspect ratio, the profile configuration file now supports new Screen Resolution presets.
-
-| ScreenRes | Resolution            |
-|-----------|-----------------------|
-| 0         | 640x480               |
-| 1         | 800x600               |
-| 2         | 1024x768              |
-| 3         | 1280x1024             |
-| 4         | 7680x4320 / Native    |
-| 5         | 1440x1080             |
-| 6         | 1920x1080             |
-| 7         | 1920x1440             |
-| 8         | 2560x1440             |
-| 9         | 2880x2160             |
-| 10        | 3840x2160             |
-
-- dgVoodoo2 and 3D-Analyze comes included to fix dynamic lighting such as the Mercenary’s flashlight.
-  - By default, the game will be installed as a dgVoodoo2 build. If you would like to switch between dgVoodoo2 or 3D-Analyze, run the command script, `ConvertBuild.cmd` in the System folder.
-- Framer included in the game directory to easily remove the 30 FPS restriction.
-- EAX can easily be restored into the game using the `eax_restore.reg` script in the System folder.
+- EAX can easily be restored into the game using the `eax_restore.reg` registry file in the System folder.
 - Profiles can easily be accessed using the shortcut added in the System folder.
 - Improvements to the automated `ChaosTheory.log` format.
+
 
 ### Maps
 - Enhanced versions of all exclusive Pandora Tomorrow maps (Cinema, Krauser Lab, Mount Hospital, Schermerhorn, Vertigo Plaza) and Enhanced Sanctuary have been added to the map pool.
 - All the Pandora Tomorrow UMP maps, Sanctuary, Skyscraper, and Terminus have been added to the map pool.
 ---
 - Enhanced Aquarius:
-  - Added a pole in the Spies’ insertion point to solely access Tech Room.
+  - Added a pole in the Spies' insertion point to solely access Tech Room.
   - Spies can now climb back up to their insertion point from the Tech Room ceiling vents.
   - The fish tank containing a disk objective can no longer be refilled.
-  - The balcony overlooking Pirates’ Room can now be climbed by Spies.
+  - The balcony overlooking Pirates' Room can now be climbed by Spies.
   - *Bug fixed:* Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
   - *Bug fixed:* One of Pirates' Room beams was shifted to fix a small gap.
+  - *Bug fixed:* A painting in Office was floating off the wall.
 ---
 - Enhanced Cinema:
   - Based on the map foundation from Pandora Tomorrow.
   - All computer objectives have been raised to 12 seconds to neutralize.
-  - Added a new disk objective in the Entry that must be captured in the Lobby.
-  - A new medical kit is located in the Entry.
-  - The ammo stock located in the Lobby’s 1st floor has been relocated to the other corner to make the climbable pole easier to access.
+  - A new disk objective has been added in the Entry area that must be captured in the Lobby.
+  - Removed the advertising columns near the disk objective to prevent a fast rotation to the dropzone.
+  - A new medical kit is located in the Entry area.
+  - The ammo stock located in the Lobby's 1st floor has been relocated to the other corner to make the climbable pole easier to access.
   - Cam. Net. support added with new cameras located in the Lobby and Video Games area.
   - *Bug fixed:* All motion sensors have been adjusted correctly to allow for sneak walk movement.
 ---
@@ -82,28 +94,22 @@
   - *Bug fixed:* Map sound package now includes objective interruption, win, and lose sounds.
 ---
 - Enhanced Factory:
-  - The Cam. Net.'s located in objective rooms have been removed, only the corridors are available.
-  - Spies can no longer climb back up to Main Hall's coop objective once dropping into the room located behind the PC.
-  - The explosive barrels located in the Machine Room no longer cause a major explosion.
   - The corner vent has been removed near the bottom Machine Room objective.
-  - Spies can now open Corridor B’s door on both sides.
+  - Spies can now open Corridor B's door on both sides.
   - The mechanical digger has been raised to 5 seconds to activate.
-  - Transformer Room's electric currents damage players 25 hit points per second instead of instantly killing players.
-  - A new ladder is located on the side of the Mechanical Digger Room objective's structure.
-  - A new ladder bridge at the top Mechanical Digger Room ledge has been added.
-  - Mechanical Digger Room’s lights duration has been increased to 90 seconds when the generators are activated.
   - *Bug fixed:* Interactable objects in the Machine Room and Mechanical Digger Room incorrectly display "Security failure" on the HUD when chaffed, despite having no chaff effect.
 ---
 - Enhanced Krauser Lab:
   - Based on the map foundation from Pandora Tomorrow.
   - Removed various security from Pandora Tomorrow that were unnecessary.
-  - Time limit has been reduced to 10 minutes
-  - Warehouse’s security has been reworked with each computer objective having two lasers from the top platform.
-  - Removed the lasers surrounding Laboratory’s entrance and only have ceiling lasers guarding the computer objective.
-  - Irradiation’s computer objectives have been shifted out of their chambers so Spies can have an easier time escaping.
+  - Time limit has been reduced to 10 minutes.
+  - Warehouse's security has been reworked with each computer objective having two lasers from the top platform.
+  - Removed the lasers surrounding Laboratory's entrance and only have ceiling lasers guarding the computer objective.
+  - Irradiation's computer objectives have been shifted out of their chambers so Spies can have an easier time escaping.
+  - The front entrance doors will always remain open to improve navigation.
   - An one-way escape exit can be used from Irradiation into the Parking Lot has been added. Mercenaries can use the new path both ways.
   - Cam. Net. support added with new cameras located in the Entrance, Parking Lot, and Irradiation.
-  - *Bug fixed:* The explosive barrels now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+  - *Bug fixed:* The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
 ---
 - Enhanced Missile Strike:
   - Map has been adjusted to 4 Spy lives and 3 Mercenary lives.
@@ -117,7 +123,7 @@
 - Enhanced Mount Hospital:
   - Based on the map foundation from Pandora Tomorrow.
   - All computer objectives have been raised to 12 seconds to neutralize.
-  - Room 116’s room layout has been reworked to make it easier to defend.
+  - Room 116's room layout has been reworked to make it easier to defend.
   - Room 208 has been opened to make it easier to rotate around the second floor.
   - All motion sensors have been removed in the rooms.
   - A laser has been added for the Nursery vent.
@@ -133,7 +139,7 @@
   - *Bug fixed:* Spies in the Monolith vents could be seen from Cafe's outside fake backdrop material.
 ---
 - Enhanced Orphanage:
-  - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor’s hallways and one in the courtyard.
+  - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor's hallways and one in the courtyard.
   - Sector 2 spawn points do not activate until 10 seconds after Sector 1 has been bombed.
   - The elevators are now a one-click interaction.
   - The connector vent between Laundry and Storage has been removed.
@@ -150,9 +156,9 @@
 ---
 - Enhanced Polar Base:
   - Generators have been reduced to 25 seconds to neutralize.
-  - The doors to access Drilling Tower’s drop zone have been reduced to 2 seconds.
+  - The doors to access Drilling Tower's drop zone have been reduced to 2 seconds.
   - Removed 4 of the 8 medical kits as this map has too many for no good reason. The 4 medical kits that remain: Spy spawn, Mercenary spawn, Drilling Tower, and the one near Life Zone.
-  - Drilling Tower’s right balcony has been raised to prevent Spies from auto jumping off.
+  - Drilling Tower's right balcony has been raised to prevent Spies from auto jumping off.
   - *Bug fixed:* Security lasers have been corrected to disable the correct objectives.
   - *Bug fixed:* Spies should be able to properly snap a Mercenary's neck around the Generators area.
   - *Bug fixed:* Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
@@ -160,11 +166,8 @@
   - *Bug fixed:* Small collision fix between two meshes in the Drilling Tower drop zone room.
 ---
 - Enhanced River Mall:
-  - Spy Insertion Point has been reworked to allow for faster entry into the map.
-  - The Offices area has been reworked to allow for faster rotation and preventing Spies from jumping out the window.
-  - The computer objective located in the Offices has been relocated to the adjoining room.
-  - A new vent has been added on the Video Games side of the Spy Insertion Point.
-  - The vent located near the Hi-Fi 2nd Floor objective has been shortened.
+  - The vent near the Offices objective no longer has the path to Hi-Fi Showroom.
+  - Offices window has been lowered to allow Mercenaries to jump over it for faster rotation.
   - *Bug fixed:* Hi-Fi Curtains interaction would no longer work if reactivated before the curtains were finished transitioning.
   - *Bug fixed:* Small collision fix on the glass doors that would allow players to shoot through the edges of them.
 ---
@@ -178,13 +181,14 @@
   - The intractable buttons that opened and closed the Water Tank Corridor gates have been removed.
   - The security camera hack in the Tech Room has been removed.
   - Cam. Net. support added with new cameras located in the Station and Water Tank.
-  - *Bug fixed:* The explosive barrels now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
+  - *Bug fixed:* The explosive barrels will now have a shorter range but lethal blast radius. Originally, they would only knock out people, however charging into a barrel that is not lethal would cause a bug where Mercenaries were permanently sleeping.
 ---
 - Enhanced Station:
    - Time limit has been reduced to 10 minutes, lives adjusted to 4 Spy lives and 3 Mercenary lives.
-   - Parking lot jacks have been reduced to 20 seconds to neutralize.
+   - Parking lot jacks have been reduced to 20 seconds to bomb.
    - Parking lot jacks door has been decreased from 3 seconds to 0 seconds.
-   - Train Maintenance’s entrance doors now open once Spies neutralize the first mission objective.
+   - Parking lot jacks door will automatically open if the objective is bombed.
+   - Train Maintenance's entrance doors now open once Spies neutralize the first mission objective.
    - Train Maintenance doors leading to each computer objective has been decreased from 3 seconds to 0 seconds.
    - A new medical kit is located in Train Maintenance.
    - *Bug fixed:* One of the coops in the Streets could not be sniped through the grills.
@@ -200,6 +204,7 @@
   - The Laboratory area has been reworked to allow for faster rotation.
   - Secret Files hatch wraps around the boss's office instead of being a route to the connector building.
   - *Bug fixed:* Chaffing the Shop ceiling lights would cause the mesh to disappear.
+  - *Bug fixed:* The explosive near Crane Control would still play sounds after it was destroyed if Mines or Frag Grenades exploded nearby.
 ---
 - Enhanced Vertigo Plaza
   - Based on the map foundation from Pandora Tomorrow.
