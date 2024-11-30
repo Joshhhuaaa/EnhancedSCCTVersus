@@ -5,6 +5,8 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 
 For a full list of patch notes, refer to the [Patch Notes](PatchNotes.md) page.
 
+[![Discord](https://img.shields.io/discord/934536491420508281?color=%237289DA&label=Members&logo=discord&logoColor=white)](https://discord.gg/rmBp94uR58)
+
 ## Installation
 The latest version of Enhanced SCCT Versus can be found in the [Releases](https://github.com/Joshhhuaaa/EnhancedSCCTVersus/releases) page. Please note that versions of Enhanced SCCT Versus are not compatible with the default version of the game or previous Enhanced versions.
 
