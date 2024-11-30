@@ -9,11 +9,11 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
 - Sticky Cam context menu that is used when a previous camera is active will no longer interrupt shooting a new camera when moving forward or backward.
 - Sticky Cam interaction radius has been increased to make it easier to pick up cameras without needing to be at a specific angle.
 - Frag Grenades fired by Mercenaries while moving forward will no longer visually appear to fall at the Mercenary's feet on the client's screen when the host's frame rate is significantly higher.
-- Vertical sway in Mercenary Sniper Mode will no longer increase on higher frame rates.
+- Scope sway in Mercenary Sniper Mode will no longer increase on higher frame rates.
 - Weapon kick in Mercenary Sniper Mode will no longer change depending on mouse sensitivity.
 - Screen shake will more closely maintain its original intensity on higher frame rates.
 - The Spy foot climb animation will no longer fail at certain heights on higher frame rates.
-- The Coop boost animation has been locked at frame rates above 90 to ensure the Spy does not fail to reach the ledge.
+- The Coop boost animation has been locked at frame rates above 60 to ensure the Spy does not fail to reach the ledge.
 - Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
 - Animated textures and shaders will maintain their original speed and won't run faster on higher frame rates.
 - Improved Mercenary movement to prevent accidentally performing a Berserk if moving forward.
@@ -47,6 +47,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
 - Mouse sensitivity is now configured exclusively through the in-game console using `sens <value>` command or in `SCCT_Versus.config`.
 - Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the in-game console using `sens_camera <value>` command or in `SCCT_Versus.config`.
 - Mouse sensitivity for the GUI menu cursor can now be configured through the in-game console using `sens_menu <value>` command or in `SCCT_Versus.config`.
+- Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the in-game console using the `scope_sync <true/false>` command or in `SCCT_Versus.config`. By default, the game has a slower vertical sensitivity in these camera modes.
 - Frame rate can now be configured through the in-game console using `fps_host <value>` and `fps_client <value>` commands or in `SCCT_Versus.config`.
 - Frame timing has been improved to be more consistent and reduced input lag.
 - Screen resolutions are now read directly from the device driver, supporting any resolution that the hardware can handle.
