@@ -18,21 +18,14 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 > [!IMPORTANT]
 > If experiencing an error on startup, you likely need to install [Microsoft Visual C++ 2015-2022 Redistributable (x86)](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 
-### EAX Resotration (optional)
-EAX enhances the game's audio using hardware acceleration to process advanced 3D environments. Since Windows Vista, Microsoft has stripped out the DirectSound3D API, preventing EAX from functioning.
-
-- To restore EAX functionality, run the registry file, `eax_restore.reg` in the System folder and press "Yes" to the dialog to add the registry entries.
-
- This registry file registers `dsound.dll` in Windows, enabling EAX to function. Please note that this registry applies only to your specific Windows user. If you create a new Windows user, you'll need to run the registry file again to restore EAX.
-
- ## Playing Online
+## Playing Online
 Ubisoft discontinued Chaos Theory's servers in April 2016. However, the multiplayer is still playable using a custom LAN master server or connecting directly to an IP address. 
 
 Starting with Enhanced SCCT Versus v3.4, LAN Sessions now have the functionality to connect over the internet via IP address or master server. No third-party programs are needed to play online.
  - Includes a LAN master server that will automatically find sessions hosted online.
  - To connect directly to a specific IP address, configure the IP address and port (default: 8888) in the `serverList` entry of `SCCT_Versus.config`.
 
- ### Hosting a Game Session
+### Hosting a Game Session
 When hosting a game session, if UPnP (Universal Plug and Play) is enabled on your router, a chat message will appear in the lobby indicating whether the ports have been successfully forwarded. However, if you prefer to keep UPnP disabled, you will need to manually port forward to allow other players to connect to your game:
 
 | Protocol | Port  |
