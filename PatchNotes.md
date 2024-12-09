@@ -158,8 +158,9 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
 - Enhanced Polar Base:
   - Generators have been reduced to 25 seconds to neutralize.
   - The doors to access Drilling Tower's drop zone have been reduced to 2 seconds.
-  - Removed 4 of the 8 medical kits as this map has too many for no good reason. The 4 medical kits that remain: Spy spawn, Mercenary spawn, Drilling Tower, and the one near Life Zone.
+  - 4 of the 8 medical kits have been removed. The 4 medical kits that remain are at the Spy spawn, Mercenary spawn, Drilling Tower, and the one near the Life Zone.
   - Drilling Tower's right balcony has been raised to prevent Spies from auto jumping off.
+  - The glass windows in Spy spawn are no longer destructible to prevent spawn grenades.
   - *Bug fixed:* Security lasers have been corrected to disable the correct objectives.
   - *Bug fixed:* Spies should be able to properly snap a Mercenary's neck around the Generators area.
   - *Bug fixed:* Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
