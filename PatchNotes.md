@@ -60,14 +60,12 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
 - The dedicated server executable is not currently supported and will not be included.
 - ESRB Notice on startup has been disabled to speed up boot time.
 - The longer lobby music from the Xbox version has been restored.
-- EAX can easily be restored into the game using the `eax_restore.reg` registry file in the System folder.
-- Profiles can easily be accessed using the shortcut added in the System folder.
 - Improvements to the automated `ChaosTheory.log` format.
 
 
 ### Maps
 - Enhanced versions of all exclusive Pandora Tomorrow maps (Cinema, Krauser Lab, Mount Hospital, Schermerhorn, Vertigo Plaza) and Enhanced Sanctuary have been added to the map pool.
-- All the Pandora Tomorrow UMP maps, Sanctuary, Skyscraper, and Terminus have been added to the map pool.
+- All the Pandora Tomorrow UMP maps, Sanctuary, and Skyscraper have been added to the map pool.
 ---
 - Enhanced Aquarius:
   - Added a pole in the Spies' insertion point to solely access Tech Room.
@@ -130,14 +128,6 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - A laser has been added for the Nursery vent.
   - A new medical kit is located in the Spy insertion point.
   - Cam. Net. support added with new cameras located in the 1st and 2nd floor hallways.
----
-- Enhanced Museum:
-  - The Cafe computer objectives have been reduced to 12 seconds to neutralize.
-  - All door entrances leading into Storage are only accessible to the Mercenaries.
-  - If Café Outside is neutralized, the door entrances leading to Storage will unlock in Exhibition.
-  - If Café Inside is neutralized, the door entrances leading to Storage will unlock in Monolith.
-  - *Bug fixed:* Removed the glass panels in Cafe Inside to prevent an exploit where Mercenaries can see Spies in Motion Vision through the ceiling.
-  - *Bug fixed:* Spies in the Monolith vents could be seen from Cafe's outside fake backdrop material.
 ---
 - Enhanced Orphanage:
   - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor's hallways and one in the courtyard.
