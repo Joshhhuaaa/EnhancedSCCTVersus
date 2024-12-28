@@ -131,7 +131,6 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
 - Enhanced Orphanage:
   - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor's hallways and one in the courtyard.
   - Sector 2 spawn points do not activate until 10 seconds after Sector 1 has been bombed.
-  - The elevators are now a one-click interaction.
   - The connector vent between Laundry and Storage has been removed.
   - The Storage vent leading to the Dormitory has been removed.
   - The Washroom vent located near the computer objective has been removed.
@@ -140,6 +139,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - A motion sensor located in the ceiling of Canteen has been relocated to detect both routes in the vent.
   - The drop zone has been repositioned with cover to protect spies.
   - *Bug fixed:* In Sector 1, when the bomb objectives exploded, they would kill players in their blast radius longer than the explosion visual effect.
+  - *Bug fixed:* The rear elevator required an extra button press to display the correct option in the context menu.
   - *Bug fixed:* Added elevated ramps to the vents at the entrances to prevent an exploit where Mercenaries could neutralize Spies through the floor.
   - *Bug fixed:* In the Classroom hallway, one of the furniture dust covers was missing its EMF/Thermal texture.
   - *Bug fixed:* In Visit a Map, the first tip would remain on screen after leaving its radius.
