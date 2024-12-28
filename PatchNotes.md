@@ -72,7 +72,6 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - Spies can now climb back up to their insertion point from the Tech Room ceiling vents.
   - The fish tank containing a disk objective can no longer be refilled.
   - The balcony overlooking Pirates' Room can now be climbed by Spies.
-  - *Bug fixed:* Added a skybox to the exterior to prevent grenades from being bounced from the "roof" of outside.
   - *Bug fixed:* One of Pirates' Room beams was shifted to fix a small gap.
   - *Bug fixed:* A painting in Office was floating off the wall.
 ---
