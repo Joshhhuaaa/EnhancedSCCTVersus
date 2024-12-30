@@ -48,7 +48,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
 - Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the in-game console using `sens_camera <value>` command or in `SCCT_Versus.config`.
 - Mouse sensitivity for the GUI menu cursor can now be configured through the in-game console using `sens_menu <value>` command or in `SCCT_Versus.config`.
 - Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the in-game console using the `scope_sync <true/false>` command or in `SCCT_Versus.config`. By default, the game has a slower vertical sensitivity in these camera modes.
-- Frame rate can now be configured through the in-game console using `fps_host <value>` and `fps_client <value>` commands or in `SCCT_Versus.config`.
+- Frame rate can now be configured through the in-game console using `fps_spy <value>` and `fps_merc <value>` commands or in `SCCT_Versus.config`.
 - Frame timing has been improved to be more consistent and reduced input lag.
 - Screen resolutions are now read directly from the device driver, supporting any resolution that the hardware can handle.
 - Monitor's refresh rate will now automatically detect and apply the highest available setting.
