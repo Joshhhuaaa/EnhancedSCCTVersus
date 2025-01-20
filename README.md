@@ -23,7 +23,7 @@ Ubisoft discontinued Chaos Theory's servers in April 2016. However, the multipla
 
 Starting with Enhanced SCCT Versus v3.4, LAN Sessions now have the functionality to connect over the internet via IP address or master server. No third-party programs are needed to play online.
  - Includes a LAN master server that will automatically find sessions hosted online.
- - To connect directly to a specific IP address, configure the IP address and port (default: 8888) in the `serverList` entry of `SCCT_Versus.config`.
+ - To connect directly to a specific IP address, configure the IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
 
 ### Hosting a Game Session
 When hosting a game session, if UPnP (Universal Plug and Play) is enabled on your router, a chat message will appear in the lobby indicating whether the ports have been successfully forwarded. However, if you prefer to keep UPnP disabled, you will need to manually port forward to allow other players to connect to your game:
