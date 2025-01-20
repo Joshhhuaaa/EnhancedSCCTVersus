@@ -39,7 +39,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - Includes a LAN master server that will automatically find sessions hosted by others online.
   - UPnP (Universal Plug and Play) will automatically port forward when hosting a game session if enabled in your router. UPnP can be configured by editing `host_upnp` in `SCCT_Versus.config`
   - Port numbers can be configured by editing `client_port_query`, `host_port_game` and `host_port_query` in `SCCT_Versus.config.`
-  - To connect directly to a specific IP address, configure their IP address and port (default: 8888) in the `serverList` entry of `SCCT_Versus.config`.
+  - To connect directly to a specific IP address, configure their IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
 - Mouse input has been corrected to accurately read data at high polling rates, eliminating the need for 125 Hz polling rate.
 - Mouse input no longer has negative acceleration.
 - Mouse input has been improved for the Sticky Cam and Cam. Net. camera modes.
