@@ -34,3 +34,5 @@ When hosting a game session, if UPnP (Universal Plug and Play) is enabled on you
 | UDP      | 8888  |
 
 If there are conflicts within your network, you can adjust the port numbers by editing `host_port_game` and `host_port_query` in `SCCT_Versus.config`.
+
+For additional help, refer to the [Hosting Guide](https://gist.github.com/Joshhhuaaa/6e4f8ff745f5fe5148d4d8b265fa6518) page.
