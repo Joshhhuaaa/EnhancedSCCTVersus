@@ -13,6 +13,7 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 ### Game Setup
 - After downloading Enhanced SCCT Versus, extract the contents. You will then have an Enhanced SCCT Versus folder, which you can place anywhere you like since it's portable.
 - Run the game executable, `SCCT_Versus.exe` located in the System folder to begin playing.
+- Open the Reloaded settings in-game with `F12` or `Ctrl+O` hotkeys.
 - You can adjust additional settings in `SCCT_Versus.config` located in the System folder.
 
 > [!IMPORTANT]
