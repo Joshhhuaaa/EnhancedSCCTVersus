@@ -1,27 +1,43 @@
 # Enhanced SCCT Versus Patch Notes
 
-Thanks to AllyPal for contributing to various fixes and improvements in this version of Enhanced SCCT Versus with the [SCCT Versus Reloaded](https://allypal.github.io/SCCT_Versus_Reloaded) patch.
+Thanks to AllyPal for contributing to various fixes and improvements in Enhanced SCCT Versus with the [SCCT Versus Reloaded](https://allypal.github.io/SCCT_Versus_Reloaded) patch.
 
 ### Gameplay
+#### Bug Fixes
 - Grenades fired from a weapon will no longer sometimes explode instantly on impact, often called insta grenades, instead of waiting for their usual detonation time.
 - Spies with adrenaline will no longer have stutter movement as clients.
-- Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
+- Fixed a bug where Spies couldn't be knocked out or elbowed after interrupting a computer or hacking panel.
+- Spies will no longer briefly get stuck in weapon mode when shooting a Sticky Cam or become permanently stuck if shooting a Sticky Cam during a crouch transition.
 - Sticky Cam context menu that is used when a previous camera is active will no longer interrupt shooting a new camera when moving forward or backward.
-- Sticky Cam interaction radius has been increased to make it easier to pick up cameras without needing to be at a specific angle.
 - Frag Grenades fired by Mercenaries while moving forward will no longer visually appear to fall at the Mercenary's feet on the client's screen when the host's frame rate is significantly higher.
+- Motion Vision will no longer incorrectly detect players behind solid objects when looking through glass.
+- The Mercenary's flashlight will no longer turn off when entering Sniper Mode, similar to the Xbox version.
 - Scope sway in Mercenary Sniper Mode will no longer increase on higher frame rates.
 - Weapon kick in Mercenary Sniper Mode will no longer change depending on mouse sensitivity.
 - Screen shake will more closely maintain its original intensity on higher frame rates.
 - The Spy foot climb animation will no longer fail at certain heights on higher frame rates.
 - The Coop boost animation has been locked at frame rates above 60 to ensure the Spy does not fail to reach the ledge.
-- Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
+- When playing as a client, the pickup interaction for the disk objective will no longer occasionally replicate incorrectly, preventing the Spy from picking it up.
+- The Shocker Gun tase sound will no longer repeat unexpectedly when playing as a client.
+- The Sticky Camera activation sound will no longer repeat unexpectedly when playing as a client.
+- The Camo. Suit will no longer occasionally render the Spy uncloaked when playing as a client.
+- When playing as a Mercenary, disabling Enhanced Reality will no longer cause the audio to become stuck at the location where it was turned off.
+- Opening the Strategic Map on a level without one assigned will no longer crash the game.
 - Animated textures and shaders will maintain their original speed and won't run faster on higher frame rates.
+#### Enhancements
+- Reduced the height distance at which jumps lock-on and snap to nearby enemies to 7.5 meters.
+- Adjusted the grab angle to make grabbing Mercenaries from the left side more reliable.
+- Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
+- Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
 - Improved Mercenary movement to prevent accidentally performing a Berserk if moving forward.
-- Adjusted the Mercenary crosshair to align more closely with the center of the screen.
-- Proxy Mines' minimum detected velocity (140) have been raised to the Xbox version's value (200). This eliminates a rare chance that causes Proxy Mines to explode even when sneaking.
+- Sticky Cam interaction radius has been increased to make it easier to pick up cameras without needing to be at a specific angle.
+- Camo. Suit will no longer be detected by security cameras or Motion Vision.
+- Camo. Suit will no longer uncloak when performing ledge climbs at higher frame rates.
+- Proxy Mines' minimum detected velocity have been raised to the Xbox version's value. This eliminates a rare chance that causes Proxy Mines to explode even when sneaking.
 - Presence Detectors will scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
-
-### Audio
+- Adjusted the Mercenary crosshair to align more closely with the center of the screen.
+- Added an optional HUD element to show the player's current location.
+- Show Connected Players (Scoreboard) is now enabled by default, and its toggle state is saved across multiple games.
 - The following sounds are no longer audible for more stealthy gameplay:
   - Using medical kits
   - Equipping the Shocker Gun without laser
@@ -33,35 +49,48 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - Back to wall animation
   - Activating Camo Suit
 
-### Miscellaneous
+### General
+- New GUI for Reloaded settings has been added. Open the Reloaded settings with `F12` or `Ctrl+O` hotkeys.
 - New console commands have been added. Open the console with the Tilde (~) or Backtick (\`) key and type `help` to see the list of available commands. Press the Escape key to close the console.
+- Frame rate can now be configured through the Reloaded settings.
+- Frame timing has been improved to be more consistent and reduced input lag.
+- EAX will be automatically restored if the necessary entries are missing from the Windows Registry.
+- The voice chat sample rate has been increased from 8000Hz to 11025Hz, providing a slight improvement in quality.
+- The game will no longer continuously attempt to access the microphone when Windows denies access or when no microphone is connected, preventing performance issues.
+- ESRB Notice on startup has been disabled to speed up boot time.
+- The longer lobby music from the Xbox version has been restored.
+- Improved the format of the automated `ChaosTheory.log`. Sessions are now logged in UTC time instead of the PC's local time, ensuring consistent logs when sent to others.
+
+### Input
+- Mouse input has been corrected to accurately read data at high polling rates, eliminating the need for 125 Hz polling rate.
+- Mouse input no longer has negative acceleration.
+- Mouse input has been improved for the Sticky Cam and Cam. Net. camera modes.
+- Mouse sensitivity is no longer tied to frame rate; switching between different frame rates should now feel identical.
+- Mouse sensitivity is now configured through the Reloaded settings.
+- Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the Reloaded settings.
+- Mouse sensitivity for the GUI menu cursor can now be configured through the Reloaded settings.
+- Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the Reloaded settings. By default, the game has a slower vertical sensitivity in these camera modes.
+- Sticky Cam and Cam. Net. zoom levels no longer break at higher frame rates.
+- Mouse input has been improved for the interactable spotlights on Missile Strike.
+
+### Graphics
+- Screen resolutions are now read directly from the device driver, supporting any resolution that the hardware can handle.
+- Monitor's refresh rate will now automatically detect and apply the highest available setting.
+- Widescreen support has been added to prevent 16:9 aspect ratio from appearing stretched, configurable through the in-game console using `widescreen <true/false>` command or in `SCCT_Versus.config`.
+  - Mercenary field of view can be through the Reloaded settings. A value of `112.0` will preserve the same vertical view as 4:3 aspect ratio.
+- Experimental native borderless mode, it is recommended to use this setting only with native resolution.
+- Shadow resolution can now be configured up to 16K resolution on supported GPUs through the Reloaded settings.
+- Texture filtering can now be configured through the Reloaded settings.
+- Increased the level of detail (LOD) distance significantly, improving the quality of meshes at greater distances.
+- A native fix comes included to fix dynamic lighting such as the Mercenary's flashlight.
+
+### Networking
 - LAN Sessions now have the functionality to connect over the internet via IP address or master server.
   - Includes a LAN master server that will automatically find sessions hosted by others online.
   - UPnP (Universal Plug and Play) will automatically port forward when hosting a game session if enabled in your router. UPnP can be configured by editing `host_upnp` in `SCCT_Versus.config`
   - Port numbers can be configured by editing `client_port_query`, `host_port_game` and `host_port_query` in `SCCT_Versus.config.`
   - To connect directly to a specific IP address, configure their IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
-- Mouse input has been corrected to accurately read data at high polling rates, eliminating the need for 125 Hz polling rate.
-- Mouse input no longer has negative acceleration.
-- Mouse input has been improved for the Sticky Cam and Cam. Net. camera modes.
-- Mouse sensitivity is no longer tied to frame rate; switching between different frame rates should now feel identical.
-- Mouse sensitivity is now configured exclusively through the in-game console using `sens <value>` command or in `SCCT_Versus.config`.
-- Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the in-game console using `sens_camera <value>` command or in `SCCT_Versus.config`.
-- Mouse sensitivity for the GUI menu cursor can now be configured through the in-game console using `sens_menu <value>` command or in `SCCT_Versus.config`.
-- Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the in-game console using the `scope_sync <true/false>` command or in `SCCT_Versus.config`. By default, the game has a slower vertical sensitivity in these camera modes.
-- Frame rate can now be configured through the in-game console using `fps_spy <value>` and `fps_merc <value>` commands or in `SCCT_Versus.config`.
-- Frame timing has been improved to be more consistent and reduced input lag.
-- Screen resolutions are now read directly from the device driver, supporting any resolution that the hardware can handle.
-- Monitor's refresh rate will now automatically detect and apply the highest available setting.
-- Widescreen support has been added to prevent 16:9 aspect ratio from appearing stretched, configurable through the in-game console using `widescreen <true/false>` command or in `SCCT_Versus.config`.
-  - Mercenary field of view can be configured through the in-game console using `ws_fov <value>` command or in `SCCT_Versus.config`. A value of `112.0` will preserve the same vertical view as 4:3 aspect ratio.
-- Experimental native borderless mode, it is recommended to use this setting only with native resolution.
-- Increased the level of detail (LOD) distance significantly, improving the quality of meshes at greater distances.
-- A native fix comes included to fix dynamic lighting such as the Mercenary's flashlight.
-- The dedicated server executable is not currently supported and will not be included.
-- ESRB Notice on startup has been disabled to speed up boot time.
-- The longer lobby music from the Xbox version has been restored.
-- Improvements to the automated `ChaosTheory.log` format.
-
+- The dedicated server executable is not supported and will not be included.
 
 ### Maps
 - Enhanced versions of all exclusive Pandora Tomorrow maps (Cinema, Krauser Lab, Mount Hospital, Schermerhorn, Vertigo Plaza) and Enhanced Sanctuary have been added to the map pool.
@@ -127,14 +156,20 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - A laser has been added for the Nursery vent.
   - A new medical kit is located in the Spy insertion point.
   - Cam. Net. support added with new cameras located in the 1st and 2nd floor hallways.
+  - *Bug fixed:* Inconsistent bullet penetration on the 2nd floor's fake ceilings.
+---
+- Enhanced Museum:
+  - The Cafe computer objectives have been reduced to 12 seconds to neutralize.
+  - All door entrances leading into Storage are only accessible to the Mercenaries.
+  - If Café Outside is neutralized, the door entrances leading to Storage will unlock in Exhibition.
+  - If Café Inside is neutralized, the door entrances leading to Storage will unlock in Monolith.
+  - *Bug fixed:* Spies in the Monolith vents could be seen from Cafe's outside fake backdrop material.
 ---
 - Enhanced Orphanage:
   - Cam. Net. has been completely redesigned with five new ones: two located in first and second floor's hallways and one in the courtyard.
   - Sector 2 spawn points do not activate until 10 seconds after Sector 1 has been bombed.
   - The connector vent between Laundry and Storage has been removed.
   - The Storage vent leading to the Dormitory has been removed.
-  - The Washroom vent located near the computer objective has been removed.
-  - The Washroom vent located on the ceiling has been removed. 
   - A motion sensor located in the ceiling of Canteen has been removed.
   - A motion sensor located in the ceiling of Canteen has been relocated to detect both routes in the vent.
   - The drop zone has been repositioned with cover to protect spies.
@@ -155,9 +190,10 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - *Bug fixed:* Door behavior for Life Zone and Drilling Tower's drop zone have been changed so if bumped, the door will retry to close itself instead of staying open.
   - *Bug fixed:* Several container boxes were intersecting into pillars and other geometry around Hangar and Drilling Tower.
   - *Bug fixed:* Small collision fix between two meshes in the Drilling Tower drop zone room.
+  - *Bug fixed:* A blocking volume was adjusted to prevent Spies from jumping onto the exterior wall near the Drilling Tower's drop zone.
 ---
 - Enhanced River Mall:
-  - The vent near the Offices objective no longer has the path to Hi-Fi Showroom.
+  - The Cam. Net. in Central Post has been removed.
   - Offices window has been lowered to allow Mercenaries to jump over it for faster rotation.
   - *Bug fixed:* Hi-Fi Curtains interaction would no longer work if reactivated before the curtains were finished transitioning.
   - *Bug fixed:* Small collision fix on the glass doors that would allow players to shoot through the edges of them.
@@ -196,6 +232,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in this ver
   - Secret Files hatch wraps around the boss's office instead of being a route to the connector building.
   - *Bug fixed:* Chaffing the Shop ceiling lights would cause the mesh to disappear.
   - *Bug fixed:* The explosive near Crane Control would still play sounds after it was destroyed if Mines or Frag Grenades exploded nearby.
+  - *Bug fixed:* The explosives used for Crane Control's sequence could be destroyed before the event.
 ---
 - Enhanced Vertigo Plaza
   - Based on the map foundation from Pandora Tomorrow.
