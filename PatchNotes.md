@@ -67,9 +67,10 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 - Mouse input has been improved for the Sticky Cam and Cam. Net. camera modes.
 - Mouse sensitivity is no longer tied to frame rate; switching between different frame rates should now feel identical.
 - Mouse sensitivity is now configured through the Reloaded settings.
+- Mouse sensitivity for the Spy Binoculars and Mercenary Sniper Mode can now be configured through the Reloaded settings.
 - Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the Reloaded settings.
 - Mouse sensitivity for the GUI menu cursor can now be configured through the Reloaded settings.
-- Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the Reloaded settings. By default, the game has a slower vertical sensitivity in these camera modes.
+- Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the Reloaded settings. In legacy sniper mode, the game has a slower vertical sensitivity in these camera modes.
 - Sticky Cam and Cam. Net. zoom levels no longer break at higher frame rates.
 - Mouse input has been improved for the interactable spotlights on Missile Strike.
 
@@ -78,11 +79,11 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 - Monitor's refresh rate will now automatically detect and apply the highest available setting.
 - Widescreen support has been added to prevent 16:9 aspect ratio from appearing stretched, configurable through the in-game console using `widescreen <true/false>` command or in `SCCT_Versus.config`.
   - Mercenary field of view can be through the Reloaded settings. A value of `112.0` will preserve the same vertical view as 4:3 aspect ratio.
-- Experimental native borderless mode, it is recommended to use this setting only with native resolution.
+- Experimental borderless mode can be configured through the Reloaded settings, it is recommended to use this setting only with native resolution.
 - Shadow resolution can now be configured up to 16K resolution on supported GPUs through the Reloaded settings.
 - Texture filtering can now be configured through the Reloaded settings.
 - Increased the level of detail (LOD) distance significantly, improving the quality of meshes at greater distances.
-- A native fix comes included to fix dynamic lighting such as the Mercenary's flashlight.
+- A native fix comes included to fix dynamic lighting, such as the Mercenary's flashlight and improperly rendering light beams.
 
 ### Networking
 - LAN Sessions now have the functionality to connect over the internet via IP address or master server.
