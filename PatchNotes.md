@@ -20,7 +20,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 - When playing as a client, the pickup interaction for the disk objective will no longer occasionally replicate incorrectly, preventing the Spy from picking it up.
 - The Shocker Gun tase sound will no longer repeat unexpectedly when playing as a client.
 - The Sticky Camera activation sound will no longer repeat unexpectedly when playing as a client.
-- The Camo. Suit will no longer occasionally render the Spy uncloaked when playing as a client.
+- Camo. Suit will no longer occasionally render the Spy uncloaked when playing as a client.
 - When playing as a Mercenary, disabling Enhanced Reality will no longer cause the audio to become stuck at the location where it was turned off.
 - Opening the Strategic Map on a level without one assigned will no longer crash the game.
 - Animated textures and shaders will maintain their original speed and won't run faster on higher frame rates.
