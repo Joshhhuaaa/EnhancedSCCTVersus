@@ -17,7 +17,6 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 - Screen shake will more closely maintain its original intensity on higher frame rates.
 - The Spy foot climb animation will no longer fail at certain heights on higher frame rates.
 - The Coop boost animation has been locked at frame rates above 60 to ensure the Spy does not fail to reach the ledge.
-- When playing as a client, the pickup interaction for the disk objective will no longer occasionally replicate incorrectly, preventing the Spy from picking it up.
 - The Shocker Gun tase sound will no longer repeat unexpectedly when playing as a client.
 - The Sticky Camera activation sound will no longer repeat unexpectedly when playing as a client.
 - Camo. Suit will no longer occasionally render the Spy uncloaked when playing as a client.
