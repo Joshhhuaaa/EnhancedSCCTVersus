@@ -22,9 +22,25 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 ## Playing Online
 Ubisoft discontinued Chaos Theory's servers in April 2016. However, the multiplayer is still playable using a custom LAN master server or connecting directly to an IP address. 
 
-Starting with Enhanced SCCT Versus v3.4, LAN Sessions now have the functionality to connect over the internet via IP address or master server. No third-party programs are needed to play online.
+LAN Sessions now have the functionality to connect over the internet via IP address or master server. No third-party programs are needed to play online.
  - Includes a LAN master server that will automatically find sessions hosted online.
  - To connect directly to a specific IP address, configure the IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
+
+### Dedicated Servers
+When playing on a dedicated server, you can use chat commands to adjust session parameters. Simply type them into the in-game text chat.
+
+| Command          | Description                                                                |
+| ---------------- | -------------------------------------------------------------------------- |
+| `!map <mapname>` | Changes the current map to the specified one.                              |
+| `!next`          | Skips to the next map in the server's rotation list.                       |
+| `!prev`          | Returns to the previous map in the server's rotation list.                 |
+| `!resign`        | Forfeits the current round by eliminating your remaining lives.            |
+
+#### Map Naming Convention
+When using the `!map` command, maps are referenced by their file names: the first four letters of the map name, followed by a suffix for the variant.
+- Aquarius: `AquaD`
+- Enhanced Aquarius: `AquaE`
+- UMP Mount Hospital: `MounU`
 
 ### Hosting a Game Session
 When hosting a game session, if UPnP (Universal Plug and Play) is enabled on your router, a chat message will appear in the lobby indicating whether the ports have been successfully forwarded. However, if you prefer to keep UPnP disabled, you will need to manually port forward to allow other players to connect to your game:
