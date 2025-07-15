@@ -5,6 +5,8 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 
 For a full list of patch notes, refer to the [Patch Notes](PatchNotes.md) page.
 
+When playing on dedicated servers, your performance is automatically tracked. You can view your performance, analyze game statistics, and browse available game sessions through the [SC Panel](https://sc-panel.com/).
+
 [![Discord](https://img.shields.io/discord/934536491420508281?color=%237289DA&label=Members&logo=discord&logoColor=white)](https://discord.gg/rmBp94uR58)
 
 ## Installation
