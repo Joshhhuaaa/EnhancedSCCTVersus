@@ -28,8 +28,8 @@ LAN Sessions now have the functionality to connect over the internet via IP addr
  - Includes a LAN master server that will automatically find sessions hosted online.
  - To connect directly to a specific IP address, configure the IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
 
-### Dedicated Servers
-When playing on a dedicated server, you can use chat commands to adjust session parameters. Simply type them into the in-game text chat.
+### Server Commands
+When hosting or playing on a server, you can use chat commands to adjust session parameters. Simply type them into the in-game text chat.
 
 | Command          | Description                                                                |
 | ---------------- | -------------------------------------------------------------------------- |
@@ -37,6 +37,9 @@ When playing on a dedicated server, you can use chat commands to adjust session 
 | `!next`          | Skips to the next map in the server's rotation list.                       |
 | `!prev`          | Returns to the previous map in the server's rotation list.                 |
 | `!resign`        | Forfeits the current round by eliminating your remaining lives.            |
+
+>[!NOTE]
+> In dedicated servers, all players have permission to change the map. In listen servers, only the host can change the map.
 
 #### Map Naming Convention
 When using the `!map` command, maps are referenced by their file names: the first four letters of the map name, followed by a suffix for the variant.
