@@ -7,8 +7,12 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 - Grenades fired from a weapon will no longer sometimes explode instantly on impact, often called insta grenades, instead of waiting for their usual detonation time.
 - Spies with adrenaline will no longer have stutter movement as clients.
 - Fixed a bug where Spies couldn't be knocked out or elbowed after interrupting a computer or hacking panel.
+- Speculative fix for a rare issue where a client Spy could not pick up a disk due to incorrect interaction rotation.
+- Jumps will now correctly lock-on and snap to nearby enemies when inside a volume actor.
 - Spies will no longer briefly get stuck in weapon mode when shooting a Sticky Cam or become permanently stuck if shooting a Sticky Cam during a crouch transition.
 - Sticky Cam context menu that is used when a previous camera is active will no longer interrupt shooting a new camera when moving forward or backward.
+- Sticky Cams will now properly play their activation sound for clients when fired in the east direction.
+- Fixed a bug where selecting the Camo. Suit and exiting a previous Sticky Camera would automatically use the gadget in slot 2.
 - Frag Grenades fired by Mercenaries while moving forward will no longer visually appear to fall at the Mercenary's feet on the client's screen when the host's frame rate is significantly higher.
 - Motion Vision will no longer incorrectly detect players behind solid objects when looking through glass.
 - The Mercenary's flashlight will no longer turn off when entering Sniper Mode, similar to the Xbox version.
@@ -23,19 +27,26 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 - When playing as a Mercenary, disabling Enhanced Reality will no longer cause the audio to become stuck at the location where it was turned off.
 - Opening the Strategic Map on a level without one assigned will no longer crash the game.
 - Animated textures and shaders will maintain their original speed and won't run faster on higher frame rates.
+- Fixed a bug where the Mercenary crosshair would sometimes shift to the side.
 #### Enhancements
 - Reduced the height distance at which jumps lock-on and snap to nearby enemies to 7.5 meters.
 - Adjusted the grab angle to make grabbing Mercenaries from the left side more reliable.
 - Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
 - Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
+- Improved client so that other clients' player locations do not desync as easily.
+- Improved client so that grenade locations do not desync as easily.
+- Improved client responsiveness for Sticky Cams with added lag compensation.
 - Improved Mercenary movement to prevent accidentally performing a Berserk if moving forward.
+- Increased the velocity threshold for disks to prevent Spies from briefly appearing on radar when climbing poles or ladders.
+- Updated Sticky Camera behavior so that trying to launch one with none left does not switch to a previous camera.
 - Sticky Cam interaction radius has been increased to make it easier to pick up cameras without needing to be at a specific angle.
 - Camo. Suit will no longer be detected by security cameras or Motion Vision.
 - Camo. Suit will no longer uncloak when performing ledge climbs at higher frame rates.
 - Proxy Mines' minimum detected velocity have been raised to the Xbox version's value. This eliminates a rare chance that causes Proxy Mines to explode even when sneaking.
 - Presence Detectors will scan every 1 second instead of 3 second intervals. A sound is no longer played when the scan occurs.
-- Adjusted the Mercenary crosshair to align more closely with the center of the screen.
-- Added an optional HUD element to show the player's current location.
+- The Mercenary crosshair now aligns with the center of the screen by default. An option has been added to revert to the original off-center crosshair.
+- Enhanced Reality icon opacity can now be adjusted between 20% and 100% through the Reloaded settings.
+- An optional HUD element can now be enabled to display the player’s current location.
 - Show Connected Players (Scoreboard) is now enabled by default, and its toggle state is saved across multiple games.
 - The following sounds are no longer audible for more stealthy gameplay:
   - Using medical kits
@@ -50,34 +61,45 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 
 ### General
 - New GUI for Reloaded settings has been added. Open the Reloaded settings with `F12` or `Ctrl+O` hotkeys.
+- Added new Lobby Room settings to change the map using previous/next arrows or a drop-down list with categories and search functionality.
+- A notification sound now plays when a player joins a game session.
+- Removed the restriction that prevented a host from starting a game when the other team had no players.
 - New console commands have been added. Open the console with the Tilde (~) or Backtick (\`) key and type `help` to see the list of available commands. Press the Escape key to close the console.
+- Players can type `!resign` in chat to forfeit the current round by eliminating their remaining lives.
 - Frame rate can now be configured through the Reloaded settings.
 - Frame timing has been improved to be more consistent and reduced input lag.
 - EAX will be automatically restored if the necessary entries are missing from the Windows Registry.
 - The voice chat sample rate has been increased from 8000Hz to 11025Hz, providing a slight improvement in quality.
 - The game will no longer continuously attempt to access the microphone when Windows denies access or when no microphone is connected, preventing performance issues.
+- The game will now cache the last profile's audio settings for use on the next boot.
 - ESRB Notice on startup has been disabled to speed up boot time.
 - The longer lobby music from the Xbox version has been restored.
 - Improved the format of the automated `ChaosTheory.log`. Sessions are now logged in UTC time instead of the PC's local time, ensuring consistent logs when sent to others.
 
 ### Input
+- Native controller support can now be enabled through the Reloaded settings.
+- Team-specific controls can now be configured for Spy and Mercenary.
 - Mouse input has been corrected to accurately read data at high polling rates, eliminating the need for 125 Hz polling rate.
 - Mouse input no longer has negative acceleration.
 - Mouse input has been improved for the Sticky Cam and Cam. Net. camera modes.
 - Mouse sensitivity is no longer tied to frame rate; switching between different frame rates should now feel identical.
 - Mouse sensitivity is now configured through the Reloaded settings.
+- Mouse sensitivity can now be configured independently for Spy and Mercenary.
 - Mouse sensitivity for the Spy Binoculars and Mercenary Sniper Mode can now be configured through the Reloaded settings.
+- Mouse sensitivity for the Spy Weapon Mode can now be configured through the Reloaded settings.
 - Mouse sensitivity for Sticky Camera and Cam. Net. modes can now be configured through the Reloaded settings.
 - Mouse sensitivity for the GUI menu cursor can now be configured through the Reloaded settings.
-- Spy Binoculars and Mercenary Sniper Mode can be configured to have matching horizontal and vertical sensitivity through the Reloaded settings. In legacy sniper mode, the game has a slower vertical sensitivity in these camera modes.
+- The vertical scale for Mercenary Sniper Mode can now be configured through the Reloaded settings. Originally, vertical sensitivity was fixed at 40.8% of horizontal sensitivity.
 - Sticky Cam and Cam. Net. zoom levels no longer break at higher frame rates.
 - Mouse input has been improved for the interactable spotlights on Missile Strike.
+- The Spy's lock-on snap when drawing the Shocker Gun can now be disabled through the Reloaded settings.
 
 ### Graphics
 - Screen resolutions are now read directly from the device driver, supporting any resolution that the hardware can handle.
 - Monitor's refresh rate will now automatically detect and apply the highest available setting.
-- Widescreen support has been added to prevent 16:9 aspect ratio from appearing stretched, configurable through the in-game console using `widescreen <true/false>` command or in `SCCT_Versus.config`.
+- Widescreen support has been added to prevent 16:9 aspect ratio from appearing stretched, configured through the Reloaded settings.
   - Mercenary field of view can be through the Reloaded settings. A value of `112.0` will preserve the same vertical view as 4:3 aspect ratio.
+- Redesigned the HUD to prevent stretching and provide native support for 16:9 aspect ratio.
 - Experimental borderless mode can be configured through the Reloaded settings, it is recommended to use this setting only with native resolution.
 - Shadow resolution can now be configured up to 16K resolution on supported GPUs through the Reloaded settings.
 - Texture filtering can now be configured through the Reloaded settings.
@@ -90,6 +112,8 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
   - UPnP (Universal Plug and Play) will automatically port forward when hosting a game session if enabled in your router. UPnP can be configured by editing `host_upnp` in `SCCT_Versus.config`
   - Port numbers can be configured by editing `client_port_query`, `host_port_game` and `host_port_query` in `SCCT_Versus.config.`
   - To connect directly to a specific IP address, configure their IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
+- Improved accuracy of LAN server list ping values.
+- The server name is displayed at the bottom of the Lobby Room for clients.
 - The dedicated server executable is not supported and will not be included.
 
 ### Maps
@@ -103,6 +127,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
   - The balcony overlooking Pirates' Room can now be climbed by Spies.
   - *Bug fixed:* One of Pirates' Room beams was shifted to fix a small gap.
   - *Bug fixed:* A painting in Office was floating off the wall.
+  - *Bug fixed:* Small collision fix in Pirates' Room.
 ---
 - Enhanced Cinema:
   - Based on the map foundation from Pandora Tomorrow.
@@ -118,6 +143,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
   - The computer objectives located in the back of each floor have been adjusted to 12 seconds to neutralize.
   - Added a pole near the glass structure area.
   - *Bug fixed:* A visual bug near the glass structure area when the floors were destroyed on the first floor.
+  - *Bug fixed:* Corrected the backpole window having no opacity in Thermal and EMF Vision.
   - *Bug fixed:* Map sound package now includes objective interruption, win, and lose sounds.
 ---
 - Enhanced Factory:
@@ -163,6 +189,8 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
   - All door entrances leading into Storage are only accessible to the Mercenaries.
   - If Café Outside is neutralized, the door entrances leading to Storage will unlock in Exhibition.
   - If Café Inside is neutralized, the door entrances leading to Storage will unlock in Monolith.
+  - Added hacking panels to open each of the door entrances leading to Storage.
+  - Improved the Monolith and Exhibition presence triggers to be better centered on the doors.
   - *Bug fixed:* Spies in the Monolith vents could be seen from Cafe's outside fake backdrop material.
 ---
 - Enhanced Orphanage:
