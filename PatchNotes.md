@@ -1,14 +1,14 @@
 # Enhanced SCCT Versus Patch Notes
 
-Thanks to AllyPal for contributing to various fixes and improvements in Enhanced SCCT Versus with the [SCCT Versus Reloaded](https://allypal.github.io/SCCT_Versus_Reloaded) patch.
+Thanks to AllyPal (NoFrameLimit) for contributing to various fixes and improvements in Enhanced SCCT Versus with the [SCCT Versus Reloaded](https://allypal.github.io/SCCT_Versus_Reloaded) patch.
 
 ### Gameplay
 #### Bug Fixes
 - Grenades fired from a weapon will no longer sometimes explode instantly on impact, often called insta grenades, instead of waiting for their usual detonation time.
 - Spies with adrenaline will no longer have stutter movement as clients.
+- Jumps will now correctly lock-on and snap to nearby enemies when inside a volume actor.
 - Fixed a bug where Spies couldn't be knocked out or elbowed after interrupting a computer or hacking panel.
 - Speculative fix for a rare issue where a client Spy could not pick up a disk due to incorrect interaction rotation.
-- Jumps will now correctly lock-on and snap to nearby enemies when inside a volume actor.
 - Spies will no longer briefly get stuck in weapon mode when shooting a Sticky Cam or become permanently stuck if shooting a Sticky Cam during a crouch transition.
 - Sticky Cam context menu that is used when a previous camera is active will no longer interrupt shooting a new camera when moving forward or backward.
 - Sticky Cams will now properly play their activation sound for clients when fired in the east direction.
@@ -62,6 +62,7 @@ Thanks to AllyPal for contributing to various fixes and improvements in Enhanced
 ### General
 - New GUI for Reloaded settings has been added. Open the Reloaded settings with `F12` or `Ctrl+O` hotkeys.
 - Added new Lobby Room settings to change the map using previous/next arrows or a drop-down list with categories and search functionality.
+- Removed the restriction that prevented a host from starting a game when the other team had no players.
 - A notification sound now plays when a player joins a game session.
 - Removed the restriction that prevented a host from starting a game when the other team had no players.
 - New console commands have been added. Open the console with the Tilde (~) or Backtick (\`) key and type `help` to see the list of available commands. Press the Escape key to close the console.
