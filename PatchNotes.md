@@ -8,6 +8,7 @@ Thanks to AllyPal (NoFrameLimit) for contributing to various fixes and improveme
 - Spies with adrenaline will no longer have stutter movement as clients.
 - Jumps will now correctly lock-on and snap to nearby enemies when inside a volume actor.
 - Fixed a bug where Spies couldn't be knocked out or elbowed after interrupting a computer or hacking panel.
+- While in slow mode and standing, the Spy no longer moves faster when strafing. As a result, Proxy Mines will no longer be accidentally triggered when moving diagonally.
 - Speculative fix for a rare issue where a client Spy could not pick up a disk due to incorrect interaction rotation.
 - Spies will no longer briefly get stuck in weapon mode when shooting a Sticky Cam or become permanently stuck if shooting a Sticky Cam during a crouch transition.
 - Sticky Cam context menu that is used when a previous camera is active will no longer interrupt shooting a new camera when moving forward or backward.
@@ -31,6 +32,7 @@ Thanks to AllyPal (NoFrameLimit) for contributing to various fixes and improveme
 #### Enhancements
 - Reduced the height distance at which jumps lock-on and snap to nearby enemies to 7.5 meters.
 - Adjusted the grab angle to make grabbing Mercenaries from the left side more reliable.
+- Holding the use button while in slow mode (standing or crouched) will now attempt to grab ledges when falling. This improves ledge hanging on controllers, where registering a single directional input can be difficult.
 - Spies no longer faintly appear in EMF Vision, often called EMF ghosting, when not using any equipment.
 - Spies and Mercenaries no longer have inconsistent damage values depending on which side of the body was hit.
 - Improved client so that other clients' player locations do not desync as easily.
