@@ -21,12 +21,36 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 > [!IMPORTANT]
 > If experiencing an error on startup, you likely need to install [Microsoft Visual C++ 2015-2022 Redistributable (x86)](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 
+> [!WARNING] 
+> Players located in Russia may experience issues connecting to the master server and dedicated servers due to ISP-level blocking. As a result, available dedicated servers may not appear unless a VPN is used.
+> 
+> As an alternative to using a VPN, you can manually add the following IP addresses to the `server_list` entry and replace the existing `master_server_dns` value in `SCCT_Versus.config`. These servers act as relays for both the master server and dedicated servers, allowing sessions to appear and connect in-game.
+>
+> ```
+> "server_list": [
+>     "138.124.26.105:10776",
+>     "138.124.26.105:19776",
+>     "138.124.26.105:9776",
+>     "138.124.26.105:11776",
+>     "138.124.26.105:7776",
+>     "138.124.26.105:17776",
+>     "138.124.26.105:27776",
+>     "138.124.26.105:37776",
+>     "138.124.26.105:9001",
+>     "138.124.26.105:27015"
+>   ],
+> ```
+> 
+> ```
+>  "master_server_dns": "138.124.26.105",
+> ```
+
 ## Playing Online
 Ubisoft discontinued Chaos Theory's servers in April 2016. However, the multiplayer is still playable using a custom LAN master server or connecting directly to an IP address. 
 
 LAN Sessions now have the functionality to connect over the internet via IP address or master server. No third-party programs are needed to play online.
  - Includes a LAN master server that will automatically find sessions hosted online.
- - To connect directly to a specific IP address, configure the IP address and port (default: 7776) in the `serverList` entry of `SCCT_Versus.config`.
+ - To connect directly to a specific IP address, configure the IP address and port (default: 7776) in the `server_list` entry of `SCCT_Versus.config`.
 
 ### Server Commands
 When hosting or playing on a server, you can use chat commands to adjust session parameters. Simply type them into the in-game text chat.
