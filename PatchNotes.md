@@ -62,12 +62,12 @@ Thanks to AllyPal (NoFrameLimit) for contributing to various fixes and improveme
   - Activating Camo Suit
 
 ### General
-- New GUI for Reloaded settings has been added. Open the Reloaded settings with `F12` or `Ctrl+O` hotkeys.
+- New GUI for Reloaded settings has been added. Open the Reloaded settings with <kbd>F12</kbd> or <kbd>Ctrl</kbd> + <kbd>O</kbd> hotkeys.
 - Added new Lobby Room settings to change the map using previous/next arrows or a drop-down list with categories and search functionality.
 - Removed the restriction that prevented a host from starting a game when the other team had no players.
 - A notification sound now plays when a player joins a game session.
 - Removed the restriction that prevented a host from starting a game when the other team had no players.
-- New console commands have been added. Open the console with the Tilde (~) or Backtick (\`) key and type `help` to see the list of available commands. Press the Escape key to close the console.
+- New console commands have been added. Open the console with the Tilde (<kbd>~</kbd>) or Backtick (<kbd>\`</kbd>) key and type `help` to see the list of available commands. Press the Escape key to close the console.
 - Players can type `!resign` in chat to forfeit the current round by eliminating their remaining lives.
 - Frame rate can now be configured through the Reloaded settings.
 - Frame timing has been improved to be more consistent and reduced input lag.
