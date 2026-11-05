@@ -22,7 +22,7 @@ The latest version of Enhanced SCCT Versus can be found in the [Releases](https:
 > If experiencing an error on startup, you likely need to install [Microsoft Visual C++ 2015-2022 Redistributable (x86)](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 
 > [!NOTE]
-> Linux users should download the AppImage from the Releases page. Before launching it, you may need to mark the AppImage as executable. This can usually be done by right-clicking the file, opening its Properties, and enabling the executable permission under the Permissions tab.
+> Linux users should download the AppImage from the Releases page. Before launching it, you may need to mark the AppImage as executable. This can usually be done by right-clicking the file, opening its Properties, and enabling the executable permission.
 
 > [!WARNING] 
 > Players located in Russia may experience issues connecting to the master server and dedicated servers due to ISP-level blocking. As a result, available dedicated servers may not appear unless a VPN is used.
